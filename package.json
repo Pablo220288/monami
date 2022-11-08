@@ -2,8 +2,9 @@
   "name": "monamie",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://pablo220288.github.io/monamie",
+  "homepage": "https://pablo220288.github.io/monamie",
   "dependencies": {
+    "@sweetalert2/themes": "^5.0.14",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",

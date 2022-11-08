@@ -1,0 +1,65 @@
+.cant-conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    .cant-selector{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        .cant-button{
+            all: unset;
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            &:hover{
+                background-color: black;
+                color: white;
+            }
+            &:focus{
+                transform: scale(0.97);
+            }
+        }
+        .cant-number{
+            width: 100px;
+            height: 40px;
+            border-radius: 6px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .cant-button-add{
+        all: unset;
+        width: auto;
+        height: 40px;
+        border-radius: 6px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+        padding: 0px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &:hover{
+            background-color: black;
+            color: white;
+        }
+    }
+    .disabled{
+        background-color: rgba(0, 0, 0, 0.272);
+        cursor: no-drop;
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.272);;
+            color: rgb(0, 0, 0);
+        }
+    }
+}

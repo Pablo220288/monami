@@ -1,7 +1,18 @@
+import { useState } from "react";
 import CartWidget from "./CartWidget";
 import ItemNav from "./ItemNav";
 
 const NavBar = () => {
+  const [open, setOpen] = useState("");
+  const [carrito, setCarrito] = useState("");
+
+  const openClose = () => {
+    open === "is-active" ? setOpen("") : setOpen("is-active");
+  };
+  const openCarrito = () => {
+    carrito === "modal_show" ? setCarrito("") : setCarrito("modal_show");
+  };
+
   return (
     <div>
       <nav className="nav">
@@ -32,14 +43,26 @@ const NavBar = () => {
             </a>
           </div>
           <div className="burger">
-            <a href="#carrito" id="carrito_xs">
+            <a
+              href="#carrito"
+              id="carrito_xs"
+              onClick={() => {
+                openCarrito();
+              }}
+            >
               <CartWidget />
               <div
                 id="cant-carrito-total-xs"
                 className="cant-carrito-total-xs"
               ></div>
             </a>
-            <button className="hamburger" id="hamburger">
+            <button
+              className={`hamburger ${open}`}
+              id="hamburger"
+              onClick={() => {
+                openClose();
+              }}
+            >
               <span></span>
               <span></span>
               <span></span>
@@ -48,7 +71,10 @@ const NavBar = () => {
         </div>
       </nav>
       <nav className="nav-mobile">
-        <div className="nav-mobile-container" id="nav-mobile-container">
+        <div
+          className={`nav-mobile-container ${open}`}
+          id="nav-mobile-container"
+        >
           <a className="nav-mobile-item" href="#home">
             <p>Inicio</p>
           </a>
@@ -60,6 +86,37 @@ const NavBar = () => {
           </a>
         </div>
       </nav>
+      <div className={`modal-carrito ${carrito}`} id="modal-carrito">
+        <div className="modal-container">
+          <h3 className="modal-title">Bodega</h3>
+          <ion-icon
+            class="close-carrito"
+            id="close-carrito"
+            name="close-outline"
+            onClick={() => {
+              openCarrito();
+            }}
+          ></ion-icon>
+          <div id="conten-carrito"></div>
+          <div className="total-carrito">
+            <p className="total-text">Total Carrito:</p>
+            <p id="total_carrito">$</p>
+          </div>
+          <div className="buttons-carrito">
+            <button className="vaciar" id="vaciar-carrito">
+              <ion-icon
+                className="button-icon"
+                name="close-circle-outline"
+              ></ion-icon>
+              <p className="button-text">Vaciar</p>
+            </button>
+            <button className="comprar" id="comprar">
+              <ion-icon class="button-icon" name="card-outline"></ion-icon>
+              <p className="button-text">Comprar</p>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
