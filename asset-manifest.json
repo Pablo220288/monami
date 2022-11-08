@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/monamie/static/css/main.09e4503d.css",
-    "main.js": "/monamie/static/js/main.b60ff8dc.js",
+    "main.css": "/monamie/static/css/main.e57d1ff4.css",
+    "main.js": "/monamie/static/js/main.7c86186d.js",
     "static/js/787.6447183d.chunk.js": "/monamie/static/js/787.6447183d.chunk.js",
     "index.html": "/monamie/index.html",
-    "main.09e4503d.css.map": "/monamie/static/css/main.09e4503d.css.map",
-    "main.b60ff8dc.js.map": "/monamie/static/js/main.b60ff8dc.js.map",
+    "main.e57d1ff4.css.map": "/monamie/static/css/main.e57d1ff4.css.map",
+    "main.7c86186d.js.map": "/monamie/static/js/main.7c86186d.js.map",
     "787.6447183d.chunk.js.map": "/monamie/static/js/787.6447183d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.09e4503d.css",
-    "static/js/main.b60ff8dc.js"
+    "static/css/main.e57d1ff4.css",
+    "static/js/main.7c86186d.js"
   ]
 }
