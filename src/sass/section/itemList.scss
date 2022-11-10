@@ -1,0 +1,15 @@
+.cardProduct_conten{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,300px),1fr));
+    grid-auto-rows: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    justify-items: center;
+}
+
+@media (max-width:720px){
+    .cardProduct_conten{
+        flex-direction: column;
+    }
+}

@@ -18,7 +18,7 @@ const NavBar = () => {
       <nav className="nav">
         <div className="navContainer">
           <div className="logo">
-            <p>Mon Amie</p>
+            <p>Mon❤️Amie</p>
           </div>
           <div className="menu">
             <ItemNav
@@ -88,7 +88,7 @@ const NavBar = () => {
       </nav>
       <div className={`modal-carrito ${carrito}`} id="modal-carrito">
         <div className="modal-container">
-          <h3 className="modal-title">Bodega</h3>
+          <h3 className="modal-title">Carrito</h3>
           <ion-icon
             class="close-carrito"
             id="close-carrito"
@@ -104,14 +104,11 @@ const NavBar = () => {
           </div>
           <div className="buttons-carrito">
             <button className="vaciar" id="vaciar-carrito">
-              <ion-icon
-                className="button-icon"
-                name="close-circle-outline"
-              ></ion-icon>
+              <ion-icon name="close-circle-outline"></ion-icon>
               <p className="button-text">Vaciar</p>
             </button>
             <button className="comprar" id="comprar">
-              <ion-icon class="button-icon" name="card-outline"></ion-icon>
+              <ion-icon name="card-outline"></ion-icon>
               <p className="button-text">Comprar</p>
             </button>
           </div>

@@ -8,8 +8,7 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
-        .cant-button{
-            all: unset;
+        .cant-number{
             width: 40px;
             height: 40px;
             border-radius: 6px;
@@ -17,49 +16,48 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            &:hover{
-                background-color: black;
-                color: white;
-            }
-            &:focus{
-                transform: scale(0.97);
-            }
         }
-        .cant-number{
-            width: 100px;
-            height: 40px;
-            border-radius: 6px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+        .cant-button_contain{
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            .cant-button{
+                all: unset;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                &:hover{
+                    border-radius: 6px;
+                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+                }
+            }
         }
     }
-    .cant-button-add{
+    .button-add{
         all: unset;
-        width: auto;
-        height: 40px;
-        border-radius: 6px;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
-        padding: 0px 10px;
-        display: flex;
+        font-size: 2rem;
+        display: none;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        transition: all 0.2s ease;
+        transition: color 0.3s ease;
         &:hover{
-            background-color: black;
-            color: white;
+            color: $colorRed;
         }
     }
-    .disabled{
-        background-color: rgba(0, 0, 0, 0.272);
+    .button-add-disabled{
+        all: unset;
+        font-size: 2rem;
+        display: none;
+        justify-content: center;
+        align-items: center;
         cursor: no-drop;
-        &:hover{
-            background-color: rgba(0, 0, 0, 0.272);;
-            color: rgb(0, 0, 0);
-        }
+        transition: color 0.3s ease;
+    }
+    .active{
+        display: flex;
     }
 }

@@ -1,6 +1,7 @@
 import "./sass/styles.scss";
 import NavBar from "./components/NavBar.js";
 import ItemListContainer from "./components/ItemListContainer";
+import CardProduct from "./components/CardProduct";
 
 function App() {
   return (
