@@ -1,63 +1,101 @@
-.cant-conteiner{
+.cant-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  .cant-selector {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    .cant-selector{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        .cant-number{
-            width: 40px;
-            height: 40px;
-            border-radius: 6px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .cant-button_contain{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .cant-button{
-                all: unset;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                transition: all 0.2s ease;
-                &:hover{
-                    border-radius: 6px;
-                    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
-                }
-            }
-        }
+    gap: 10px;
+    .cant-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .button-add{
+    .cant-button_contain {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .cant-button {
         all: unset;
-        font-size: 2rem;
-        display: none;
+        display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        transition: color 0.3s ease;
-        &:hover{
-            color: $colorRed;
+        transition: all 0.2s ease;
+        &:hover {
+          border-radius: 6px;
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
         }
+      }
     }
-    .button-add-disabled{
-        all: unset;
-        font-size: 2rem;
-        display: none;
-        justify-content: center;
-        align-items: center;
-        cursor: no-drop;
-        transition: color 0.3s ease;
+  }
+  .button-add {
+    all: unset;
+    font-size: 2rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    &:hover {
+      color: $colorRed;
     }
-    .active{
-        display: flex;
-    }
+  }
+  .button-add-disabled {
+    all: unset;
+    font-size: 2rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: no-drop;
+    transition: color 0.3s ease;
+  }
+  .active {
+    display: flex;
+  }
+}
+
+.cartButton {
+  all: unset;
+  position: relative;
+  width: 50px;
+  height: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s ease;
+  &:active {
+    transform: scale(0.97);
+  }
+  .addToCart, .added{
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+  }
+  .added{
+    opacity: 0;
+  }
+  #iconCart {
+    position: absolute;
+    top: 50%;
+    left: -25%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 1.8rem;
+  }
+  #iconBox {
+    position: absolute;
+    top: -30%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    font-size: 1rem;
+  }
 }

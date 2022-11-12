@@ -53,21 +53,11 @@ const CantCart = () => {
             <ion-icon name="caret-down-outline"></ion-icon>
           </button>
         </div>
-        <button
-          className={`button-add ${classActive1}`}
-          onClick={() => {
-            add();
-          }}
-        >
-          <ion-icon name="cart-outline"></ion-icon>
-        </button>
-        <button
-          className={`button-add-disabled ${classActive2}`}
-          onClick={() => {
-            add();
-          }}
-        >
-          <ion-icon name="cart"></ion-icon>
+        <button className="cartButton">
+          <span className="addToCart">ADD</span>
+          <span className="added">ADDED</span>
+          <ion-icon id="iconCart" name="cart"></ion-icon>
+          <ion-icon id="iconBox" name="cube"></ion-icon>
         </button>
       </div>
     </div>
