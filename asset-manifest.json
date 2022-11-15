@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/monamie/static/css/main.65586a1f.css",
-    "main.js": "/monamie/static/js/main.e8f29597.js",
+    "main.css": "/monamie/static/css/main.277764cc.css",
+    "main.js": "/monamie/static/js/main.d1060b37.js",
     "static/js/787.6447183d.chunk.js": "/monamie/static/js/787.6447183d.chunk.js",
     "static/media/product_1_2.jpg": "/monamie/static/media/product_1_2.86e0a49dae66497ed778.jpg",
     "static/media/product_2_6.jpg": "/monamie/static/media/product_2_6.c9b27c8248d10e0fb2a5.jpg",
@@ -14,20 +14,20 @@
     "static/media/product_1_3.jpg": "/monamie/static/media/product_1_3.f6f2a3d1164a3b374615.jpg",
     "static/media/product_1_4.jpg": "/monamie/static/media/product_1_4.0b6ad593736abed0d3d1.jpg",
     "static/media/product_3_5.jpg": "/monamie/static/media/product_3_5.6f3c4e3ae6ac0df67cda.jpg",
-    "static/media/product_2_3.jpg": "/monamie/static/media/product_2_3.7aff77b5f77541b92d51.jpg",
     "static/media/product_3_2.jpg": "/monamie/static/media/product_3_2.e06f96ee550a46f2704c.jpg",
     "static/media/product_2_4.jpg": "/monamie/static/media/product_2_4.c49e8bfaea9a7cfda7dd.jpg",
     "static/media/product_3_1.jpg": "/monamie/static/media/product_3_1.0147e2dfc5cfe0d7d662.jpg",
     "static/media/product_2_1.jpg": "/monamie/static/media/product_2_1.a3aed84b5455b55eb5e4.jpg",
     "static/media/product_2_2.jpg": "/monamie/static/media/product_2_2.ff771f73950603a47a4a.jpg",
     "static/media/product_3_3.jpg": "/monamie/static/media/product_3_3.4aa6b9f86598a7fd6f77.jpg",
+    "static/media/product_2_3.jpg": "/monamie/static/media/product_2_3.55291bc34b374a949698.jpg",
     "index.html": "/monamie/index.html",
-    "main.65586a1f.css.map": "/monamie/static/css/main.65586a1f.css.map",
-    "main.e8f29597.js.map": "/monamie/static/js/main.e8f29597.js.map",
+    "main.277764cc.css.map": "/monamie/static/css/main.277764cc.css.map",
+    "main.d1060b37.js.map": "/monamie/static/js/main.d1060b37.js.map",
     "787.6447183d.chunk.js.map": "/monamie/static/js/787.6447183d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.65586a1f.css",
-    "static/js/main.e8f29597.js"
+    "static/css/main.277764cc.css",
+    "static/js/main.d1060b37.js"
   ]
 }
