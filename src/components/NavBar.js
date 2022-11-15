@@ -5,6 +5,7 @@ import ItemNav from "./ItemNav";
 const NavBar = () => {
   const [open, setOpen] = useState("");
   const [carrito, setCarrito] = useState("");
+  const [scroll, setScroll] = useState(false);
 
   const openClose = () => {
     open === "is-active" ? setOpen("") : setOpen("is-active");
@@ -13,12 +14,19 @@ const NavBar = () => {
     carrito === "modal_show" ? setCarrito("") : setCarrito("modal_show");
   };
 
+  const navScroll = () => {
+    window.scrollY >= 80 ? setScroll(true) : setScroll(false);
+  };
+  window.addEventListener("scroll", () => {
+    navScroll();
+  });
+
   return (
     <div>
-      <nav className="nav">
+      <nav className={scroll ? "nav nav-scroll" : "nav"}>
         <div className="navContainer">
           <div className="logo">
-            <p>Mon❤️Amie</p>
+            <p>Mon Amie</p>
           </div>
           <div className="menu">
             <ItemNav
@@ -37,7 +45,14 @@ const NavBar = () => {
               dataUrl={"Contacto"}
               item={"Contacto"}
             />
-            <a href="#carrito" id="carrito" className="menu-carrito">
+            <a
+              href="#carrito"
+              id="carrito"
+              className="menu-carrito"
+              onClick={() => {
+                openCarrito();
+              }}
+            >
               <CartWidget className="shop-nav" />
               <div id="cant-carrito-total" className="cant-carrito-total"></div>
             </a>

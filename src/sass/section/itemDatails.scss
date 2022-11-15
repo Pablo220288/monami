@@ -1,0 +1,90 @@
+.itemDatails {
+  position: relative;
+  width: 300px;
+  border-radius: 6px;
+  background: $colorWhite;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .closeDetails {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    font-size: 1.5rem;
+    color: $colorWhite;
+    cursor: pointer;
+    transition: color 300ms ease;
+    &:hover {
+      color: $colorRed;
+    }
+  }
+  .datailsGallery {
+    width: 90%;
+    margin: 15px auto 15px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    .imgMajor {
+      width: 100%;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+    }
+    .imgSecundarys {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2px;
+      cursor: pointer;
+      .imgSecundaryContainer {
+        width: 100%;
+        position: relative;
+        &::before {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          content: "";
+          width: 0;
+          height: 3px;
+          background: $colorRed;
+          transition: 0.3s ease;
+        }
+        &:hover::before {
+          width: 100%;
+        }
+        .imgSecundary {
+          width: 100%;
+        }
+      }
+      .imgSecundaryContainer.active::before {
+        width: 100%;
+      }
+      .imgSecundaryContainer.active .imgSecundary {
+        opacity: 0.5;
+      }
+    }
+  }
+  .datails {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 950px) {
+  .itemDatails {
+    width: auto;
+    flex-direction: row;
+    .datailsGallery {
+      width: 285px;
+      flex-direction: row;
+      margin-left: 15px;
+      .imgSecundarys {
+        width: 40px;
+        flex-direction: column;
+        margin-right: 10px;
+      }
+    }
+  }
+}

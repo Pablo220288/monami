@@ -17,8 +17,6 @@ const ItemListContainer = ({ greeting }) => {
     .then((data) => setProducts(data))
     .then((data) => setHasProduct(!data));
 
-  console.log(products);
-
   return (
     <div className="itemListContainer">
       <div>{greeting}</div>
@@ -27,7 +25,6 @@ const ItemListContainer = ({ greeting }) => {
       ) : (
         <ItemList products={products}/>
       )}
-
     </div>
   );
 };

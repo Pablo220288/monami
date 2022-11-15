@@ -4,13 +4,10 @@ import Swal from "sweetalert2";
 const CantCart = () => {
   const [cant, setCant] = useState(0);
   const stockMax = 5;
-  const [classActive1, setClassActive1] = useState("active");
-  const [classActive2, setClassActive2] = useState("");
+  const [classClicked, setClassClicked] = useState("");
 
   const add = () => {
     if (cant === stockMax - 1) {
-      setClassActive1("");
-      setClassActive2("active");
       setCant(cant + 1);
     } else if (cant >= stockMax) {
       Swal.fire("Sin Stock", "Pronto tendremos mas.!", "error");
@@ -21,13 +18,23 @@ const CantCart = () => {
 
   const remove = () => {
     if (cant === stockMax) {
-      setClassActive1("active");
-      setClassActive2("");
       setCant(cant - 1);
     } else if (cant <= 0) {
       Swal.fire("Carrito Vacio", "Vamos a comprar.?", "warning");
     } else {
       setCant(cant - 1);
+    }
+  };
+
+  const clicked = () => {
+    if(cant === 0){
+      Swal.fire("Nada que agregar.!", "Primero selecciona la Cantidad", "error");
+    }else{
+      setClassClicked("clicked");
+  
+      setTimeout(() => {
+        setClassClicked("")
+      },3000)
     }
   };
 
@@ -53,7 +60,12 @@ const CantCart = () => {
             <ion-icon name="caret-down-outline"></ion-icon>
           </button>
         </div>
-        <button className="cartButton">
+        <button
+          className={`cartButton ${classClicked}`}
+          onClick={() => {
+            clicked();
+          }}
+        >
           <span className="addToCart">ADD</span>
           <span className="added">ADDED</span>
           <ion-icon id="iconCart" name="cart"></ion-icon>

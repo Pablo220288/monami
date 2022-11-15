@@ -65,8 +65,10 @@
 .cartButton {
   all: unset;
   position: relative;
-  width: 50px;
+  width: 70px;
   height: 40px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
   cursor: pointer;
   overflow: hidden;
   transition: 0.3s ease;
@@ -76,8 +78,9 @@
   .addToCart, .added{
     position: absolute;
     top: 50%;
-    left: 55%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    font-weight: bold;
   }
   .added{
     opacity: 0;
@@ -97,5 +100,61 @@
     transform: translate(-50%, -50%);
     z-index: 3;
     font-size: 1rem;
+  }
+}
+
+.cartButton.clicked #iconCart {
+  animation: cart 1.5s ease-in-out forwards;
+}
+.cartButton.clicked #iconBox {
+  animation: box 1.5s ease-in-out forwards;
+}
+.cartButton.clicked .addToCart {
+  animation: text1 1.5s ease-in-out forwards;
+}
+.cartButton.clicked .added {
+  animation: text2 1.5s ease-in-out forwards;
+}
+
+@keyframes cart {
+  0%{
+    left: -25%;
+  }
+  40%,60%{
+    left: 50%;
+  }
+  100%{
+    left: 125%;
+  }
+}
+
+@keyframes box {
+  0%, 40%{
+    top: -30%;
+  }
+  60%{
+    top: 35%;
+    left: 52%;
+  }
+  100%{
+    top: 35%;
+    left: 125%;
+  }
+}
+
+@keyframes text1 {
+  0%{
+    opacity: 1;
+  }
+  20%, 100%{
+    opacity: 0;
+  }
+}
+@keyframes text2 {
+  0%, 80%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
   }
 }

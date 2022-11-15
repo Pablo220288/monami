@@ -1,12 +1,14 @@
 const PRODUCTOS = [
   {
     id: 1,
-    img1: require("../assets/product_1_1.jpg"),
-    img2: require("../assets/product_1_2.jpg"),
-    img3: require("../assets/product_1_3.jpg"),
-    img4: require("../assets/product_1_4.jpg"),
-    img5: require("../assets/product_1_5.jpg"),
-    img6: require("../assets/product_1_6.jpg"),
+    img: {
+      1: require("../assets/product_1_1.jpg"),
+      2: require("../assets/product_1_2.jpg"),
+      3: require("../assets/product_1_3.jpg"),
+      4: require("../assets/product_1_4.jpg"),
+      5: require("../assets/product_1_5.jpg"),
+      6: require("../assets/product_1_6.jpg"),
+    },
     title: "PARKA CON ABRIGO",
     category: "Ropa de Mujer",
     description:
@@ -15,12 +17,14 @@ const PRODUCTOS = [
   },
   {
     id: 2,
-    img1: require("../assets/product_2_1.jpg"),
-    img2: require("../assets/product_2_2.jpg"),
-    img3: require("../assets/product_2_3.jpg"),
-    img4: require("../assets/product_2_4.jpg"),
-    img5: require("../assets/product_2_5.jpg"),
-    img6: require("../assets/product_2_6.jpg"),
+    img: {
+      1: require("../assets/product_2_1.jpg"),
+      2: require("../assets/product_2_2.jpg"),
+      3: require("../assets/product_2_3.jpg"),
+      4: require("../assets/product_2_4.jpg"),
+      5: require("../assets/product_2_5.jpg"),
+      6: require("../assets/product_2_6.jpg"),
+    },
     title: "CAMPERON LARGO",
     category: "Ropa de Mujer",
     description:
@@ -29,12 +33,15 @@ const PRODUCTOS = [
   },
   {
     id: 3,
-    img1: require("../assets/product_3_1.jpg"),
-    img2: require("../assets/product_3_2.jpg"),
-    img3: require("../assets/product_3_3.jpg"),
-    img4: require("../assets/product_3_4.jpg"),
-    img5: require("../assets/product_3_5.jpg"),
-    img6: require("../assets/product_3_6.jpg"),
+    img: {
+      1: require("../assets/product_3_1.jpg"),
+      2: require("../assets/product_3_2.jpg"),
+      3: require("../assets/product_3_3.jpg"),
+      4: require("../assets/product_3_4.jpg"),
+      5: require("../assets/product_3_5.jpg"),
+      6: require("../assets/product_3_6.jpg"),
+    },
+
     title: "PARKA DE GABARDINA",
     category: "Ropa de Mujer",
     description:

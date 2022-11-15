@@ -1,7 +1,6 @@
 import "./sass/styles.scss";
 import NavBar from "./components/NavBar.js";
 import ItemListContainer from "./components/ItemListContainer";
-import CardProduct from "./components/CardProduct";
 
 function App() {
   return (
@@ -9,9 +8,11 @@ function App() {
       <header>
         <NavBar />
       </header>
-      <ItemListContainer
-        greeting={"Hola Coder..!! Bienvenidos a mi Poryecto React.js"}
-      />
+      <main>
+        <ItemListContainer
+          greeting={"Hola Coder..!! Bienvenidos a mi Poryecto React.js"}
+        />
+      </main>
     </div>
   );
 }
