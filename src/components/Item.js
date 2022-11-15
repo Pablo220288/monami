@@ -15,7 +15,7 @@ const Item = ({ product }) => {
     <div>
       <li key={product.id} className="cardProduct">
         <div className="productImg">
-          <img src={product.img[1]} alt=""></img>
+          <img src={product.img[1]} alt={product.title}></img>
           <div className="productItem">
             <div className="more_price">
               <buttom className="buttom-datails" onClick={openModal}>
