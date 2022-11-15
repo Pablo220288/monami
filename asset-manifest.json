@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/monamie/static/css/main.277764cc.css",
-    "main.js": "/monamie/static/js/main.d1060b37.js",
+    "main.css": "/monamie/static/css/main.19a815a4.css",
+    "main.js": "/monamie/static/js/main.1fe74ba0.js",
     "static/js/787.6447183d.chunk.js": "/monamie/static/js/787.6447183d.chunk.js",
     "static/media/product_1_2.jpg": "/monamie/static/media/product_1_2.86e0a49dae66497ed778.jpg",
     "static/media/product_2_6.jpg": "/monamie/static/media/product_2_6.c9b27c8248d10e0fb2a5.jpg",
@@ -22,12 +22,12 @@
     "static/media/product_3_3.jpg": "/monamie/static/media/product_3_3.4aa6b9f86598a7fd6f77.jpg",
     "static/media/product_2_3.jpg": "/monamie/static/media/product_2_3.55291bc34b374a949698.jpg",
     "index.html": "/monamie/index.html",
-    "main.277764cc.css.map": "/monamie/static/css/main.277764cc.css.map",
-    "main.d1060b37.js.map": "/monamie/static/js/main.d1060b37.js.map",
+    "main.19a815a4.css.map": "/monamie/static/css/main.19a815a4.css.map",
+    "main.1fe74ba0.js.map": "/monamie/static/js/main.1fe74ba0.js.map",
     "787.6447183d.chunk.js.map": "/monamie/static/js/787.6447183d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.277764cc.css",
-    "static/js/main.d1060b37.js"
+    "static/css/main.19a815a4.css",
+    "static/js/main.1fe74ba0.js"
   ]
 }
