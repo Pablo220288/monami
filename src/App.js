@@ -1,6 +1,7 @@
 import "./sass/styles.scss";
 import NavBar from "./components/NavBar.js";
-import ItemListContainer from "./components/ItemListContainer";
+//import ItemListContainer from "./components/ItemListContainer";
+import ItemDetailContainer from "./components/ItemDetailContainer.js";
 
 function App() {
   return (
@@ -9,9 +10,10 @@ function App() {
         <NavBar />
       </header>
       <main>
-        <ItemListContainer
+        {/* <ItemListContainer
           greeting={"Hola Coder..!! Bienvenidos a mi Poryecto React.js"}
-        />
+        /> */}
+        <ItemDetailContainer />
       </main>
     </div>
   );

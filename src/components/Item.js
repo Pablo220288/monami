@@ -1,16 +1,4 @@
-import ItemDetailContainer from "./ItemDatailContainer";
-import { useState } from "react";
-
 const Item = ({ product }) => {
-  const [isOpenModal, setIsOpenModal] = useState(false);
-
-  const openModal = () => {
-    setIsOpenModal(true);
-  };
-  const closeModal = () => {
-    setIsOpenModal(false);
-  };
-
   return (
     <div>
       <li key={product.id} className="cardProduct">
@@ -18,7 +6,7 @@ const Item = ({ product }) => {
           <img src={product.img[1]} alt={product.title}></img>
           <div className="productItem">
             <div className="more_price">
-              <buttom className="buttom-datails" onClick={openModal}>
+              <buttom className="buttom-datails">
                 +
               </buttom>
               <div className="price-conten">
@@ -39,7 +27,6 @@ const Item = ({ product }) => {
           </p>
         </div>
       </li>
-      <ItemDetailContainer product={product} isOpen={isOpenModal} closeModal={closeModal} />
     </div>
   );
 };

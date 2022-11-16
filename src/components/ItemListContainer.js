@@ -4,7 +4,7 @@ import Loader from "./Loader";
 import PRODUCTOS from "./products";
 
 const ItemListContainer = ({ greeting }) => {
-  const [products, setProducts] = useState([]);
+  const [product, setProduct] = useState([]);
   const [hasProduct, setHasProduct] = useState(false);
 
   const listproduct = new Promise((resolve) =>
@@ -23,7 +23,7 @@ const ItemListContainer = ({ greeting }) => {
       {!hasProduct ? (
         <Loader/>
       ) : (
-        <ItemList products={products}/>
+        <ItemList products={product}/>
       )}
     </div>
   );

@@ -1,7 +1,9 @@
 import { useState } from "react";
 import CantCart from "./CantCart";
 
-const ItemDatail = ({ product, closeModal }) => {
+const ItemDetail = ({ item }) => {
+console.log(item)
+
   const [imgMajor, setImgMajor] = useState(1);
 
   const [imgSecundary1, setImgSecundary1] = useState(true);
@@ -11,20 +13,16 @@ const ItemDatail = ({ product, closeModal }) => {
   const [imgSecundary5, setImgSecundary5] = useState(false);
   const [imgSecundary6, setImgSecundary6] = useState(false);
 
-  const handleModalClose = (e) => {
-    e.stopPropagation();
-  };
-
   return (
-    <div className="itemDatails" onClick={handleModalClose}>
-      <div className="closeDetails" onClick={closeModal}>
+    <div className="itemDatails">
+      <div className="closeDetails">
         <ion-icon name="close"></ion-icon>
       </div>
       <section className="datailsGallery">
         <img
           className="imgMajor"
-          alt={product.title}
-          src={product.img[imgMajor]}
+          alt={item.title}
+          src={item.img[imgMajor]}
         />
         <div className="imgSecundarys">
           <div
@@ -35,9 +33,9 @@ const ItemDatail = ({ product, closeModal }) => {
             }
           >
             <img
-              alt={product.title}
+              alt={item.title}
               className="imgSecundary"
-              src={product.img[1]}
+              src={item.img[1]}
               onClick={() => {
                 setImgMajor(1);
                 setImgSecundary1(true);
@@ -57,9 +55,9 @@ const ItemDatail = ({ product, closeModal }) => {
             }
           >
             <img
-              alt={product.title}
+              alt={item.title}
               className="imgSecundary"
-              src={product.img[2]}
+              src={item.img[2]}
               onClick={() => {
                 setImgMajor(2);
                 setImgSecundary1(false);
@@ -79,9 +77,9 @@ const ItemDatail = ({ product, closeModal }) => {
             }
           >
             <img
-              alt={product.title}
+              alt={item.title}
               className="imgSecundary"
-              src={product.img[3]}
+              src={item.img[3]}
               onClick={() => {
                 setImgMajor(3);
                 setImgSecundary1(false);
@@ -101,9 +99,9 @@ const ItemDatail = ({ product, closeModal }) => {
             }
           >
             <img
-              alt={product.title}
+              alt={item.title}
               className="imgSecundary"
-              src={product.img[4]}
+              src={item.img[4]}
               onClick={() => {
                 setImgMajor(4);
                 setImgSecundary1(false);
@@ -123,9 +121,9 @@ const ItemDatail = ({ product, closeModal }) => {
             }
           >
             <img
-              alt={product.title}
+              alt={item.title}
               className="imgSecundary"
-              src={product.img[5]}
+              src={item.img[5]}
               onClick={() => {
                 setImgMajor(5);
                 setImgSecundary1(false);
@@ -145,9 +143,9 @@ const ItemDatail = ({ product, closeModal }) => {
             }
           >
             <img
-              alt={product.title}
+              alt={item.title}
               className="imgSecundary"
-              src={product.img[6]}
+              src={item.img[6]}
               onClick={() => {
                 setImgMajor(6);
                 setImgSecundary1(false);
@@ -163,12 +161,12 @@ const ItemDatail = ({ product, closeModal }) => {
       </section>
       <section className="cardProduct datails">
         <div className="productItem">
-          <h2 className="title">{product.title}</h2>
-          <p className="category">{product.category}</p>
+          <h2 className="title">{item.title}</h2>
+          <p className="category">{item.category}</p>
         </div>
         <div className="productItem">
           <h2 className="infoTitle">Descripción</h2>
-          <p className="infoText">{product.description}</p>
+          <p className="infoText">{item.description}</p>
         </div>
         <div className="productItem">
           <div className="colors_size">
@@ -195,7 +193,7 @@ const ItemDatail = ({ product, closeModal }) => {
             <CantCart />
             <div className="price-conten">
               <p>$</p>
-              <p className="price">{`${product.price}`}</p>
+              <p className="price">{`${item.price}`}</p>
             </div>
           </div>
         </div>
@@ -203,4 +201,4 @@ const ItemDatail = ({ product, closeModal }) => {
     </div>
   );
 };
-export default ItemDatail;
+export default ItemDetail;
