@@ -1,21 +1,43 @@
 {
   "files": {
-    "main.css": "/monamie/static/css/main.29fbc460.css",
-    "main.js": "/monamie/static/js/main.7001606e.js",
-    "static/js/787.6447183d.chunk.js": "/monamie/static/js/787.6447183d.chunk.js",
+    "main.css": "/monamie/static/css/main.5e410983.css",
+    "main.js": "/monamie/static/js/main.adb7e58d.js",
+    "static/media/mujer.jpg": "/monamie/static/media/mujer.8b23afc7ece45ddb67f0.jpg",
+    "static/media/hombre.jpg": "/monamie/static/media/hombre.a49a9169ab842b787f37.jpg",
     "static/media/product_1_2.jpg": "/monamie/static/media/product_1_2.86e0a49dae66497ed778.jpg",
+    "static/media/product_2_6.jpg": "/monamie/static/media/product_2_6.c9b27c8248d10e0fb2a5.jpg",
     "static/media/product_1_6.jpg": "/monamie/static/media/product_1_6.bb10e48b4fa0a097896b.jpg",
     "static/media/product_1_1.jpg": "/monamie/static/media/product_1_1.dcffce76eddae3bd4124.jpg",
+    "static/media/backgroundHome.jpg": "/monamie/static/media/backgroundHome.e22f7c239cacb4e9727d.jpg",
+    "static/media/product_2_5.jpg": "/monamie/static/media/product_2_5.57c3734c244f91dd4938.jpg",
     "static/media/product_1_5.jpg": "/monamie/static/media/product_1_5.c2a018c75c259ff6616e.jpg",
+    "static/media/product_3_4.jpg": "/monamie/static/media/product_3_4.b33b77bdd0517f267483.jpg",
+    "static/media/product_3_6.jpg": "/monamie/static/media/product_3_6.ecac1bc57f6cdbc0e4fd.jpg",
     "static/media/product_1_3.jpg": "/monamie/static/media/product_1_3.f6f2a3d1164a3b374615.jpg",
     "static/media/product_1_4.jpg": "/monamie/static/media/product_1_4.0b6ad593736abed0d3d1.jpg",
+    "static/media/product_3_5.jpg": "/monamie/static/media/product_3_5.6f3c4e3ae6ac0df67cda.jpg",
+    "static/media/product_3_2.jpg": "/monamie/static/media/product_3_2.e06f96ee550a46f2704c.jpg",
+    "static/media/product_2_4.jpg": "/monamie/static/media/product_2_4.c49e8bfaea9a7cfda7dd.jpg",
+    "static/media/product_3_1.jpg": "/monamie/static/media/product_3_1.0147e2dfc5cfe0d7d662.jpg",
+    "static/media/product_2_1.jpg": "/monamie/static/media/product_2_1.a3aed84b5455b55eb5e4.jpg",
+    "static/media/product_2_2.jpg": "/monamie/static/media/product_2_2.ff771f73950603a47a4a.jpg",
+    "static/media/product_3_3.jpg": "/monamie/static/media/product_3_3.4aa6b9f86598a7fd6f77.jpg",
+    "static/media/TheScientist-L3EyW.ttf": "/monamie/static/media/TheScientist-L3EyW.0c2ebb56d1bcb1c278d8.ttf",
+    "static/media/product_4_4.jpg": "/monamie/static/media/product_4_4.2a7ce9e3b0d4877c8b8b.jpg",
+    "static/media/product_4_5.jpg": "/monamie/static/media/product_4_5.e83e3e90b4ed670380f7.jpg",
+    "static/media/allProducts.jpg": "/monamie/static/media/allProducts.06eb5e69ff4744020444.jpg",
+    "static/media/footer.jpg": "/monamie/static/media/footer.661b569899096d36fbb2.jpg",
+    "static/media/product_4_2.jpg": "/monamie/static/media/product_4_2.e4ce9e1b691d517e51f3.jpg",
+    "static/media/product_4_6.jpg": "/monamie/static/media/product_4_6.726a771dd5b99a3c5169.jpg",
+    "static/media/product_4_1.jpg": "/monamie/static/media/product_4_1.e462cc8388807e2f21ae.jpg",
+    "static/media/product_2_3.jpg": "/monamie/static/media/product_2_3.55291bc34b374a949698.jpg",
+    "static/media/product_4_3.jpg": "/monamie/static/media/product_4_3.b74d7661594cbb691659.jpg",
     "index.html": "/monamie/index.html",
-    "main.29fbc460.css.map": "/monamie/static/css/main.29fbc460.css.map",
-    "main.7001606e.js.map": "/monamie/static/js/main.7001606e.js.map",
-    "787.6447183d.chunk.js.map": "/monamie/static/js/787.6447183d.chunk.js.map"
+    "main.5e410983.css.map": "/monamie/static/css/main.5e410983.css.map",
+    "main.adb7e58d.js.map": "/monamie/static/js/main.adb7e58d.js.map"
   },
   "entrypoints": [
-    "static/css/main.29fbc460.css",
-    "static/js/main.7001606e.js"
+    "static/css/main.5e410983.css",
+    "static/js/main.adb7e58d.js"
   ]
 }
