@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
@@ -27,14 +28,18 @@ const CantCart = () => {
   };
 
   const clicked = () => {
-    if(cant === 0){
-      Swal.fire("Nada que agregar.!", "Primero selecciona la Cantidad", "error");
-    }else{
+    if (cant === 0) {
+      Swal.fire(
+        "Nada que agregar.!",
+        "Primero selecciona la Cantidad",
+        "error"
+      );
+    } else {
       setClassClicked("clicked");
-  
+
       setTimeout(() => {
-        setClassClicked("")
-      },3000)
+        setClassClicked("");
+      }, 3000);
     }
   };
 

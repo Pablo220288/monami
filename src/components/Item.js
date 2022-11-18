@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 const Item = ({ product }) => {
   return (
     <div>
@@ -6,9 +9,9 @@ const Item = ({ product }) => {
           <img src={product.img[1]} alt={product.title}></img>
           <div className="productItem">
             <div className="more_price">
-              <buttom className="buttom-datails">
+              <Link to={`/product/${product.id}`} className="button-datails">
                 +
-              </buttom>
+              </Link>
               <div className="price-conten">
                 <p>$</p>
                 <p className="price">{`${product.price}`}</p>

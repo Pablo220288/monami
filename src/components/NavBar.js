@@ -1,11 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
-import ItemNav from "./ItemNav";
 
 const NavBar = () => {
   const [open, setOpen] = useState("");
   const [carrito, setCarrito] = useState("");
   const [scroll, setScroll] = useState(false);
+  const [showMenu, setShowMenu] = useState("");
 
   const openClose = () => {
     open === "is-active" ? setOpen("") : setOpen("is-active");
@@ -21,30 +22,40 @@ const NavBar = () => {
     navScroll();
   });
 
+  const openMenu = () => {
+    showMenu === "showMenuProduct"
+      ? setShowMenu("")
+      : setShowMenu("showMenuProduct");
+  };
+  const closeMenu = () => {
+    setShowMenu("");
+  };
+
   return (
     <div>
       <nav className={scroll ? "nav nav-scroll" : "nav"}>
         <div className="navContainer">
           <div className="logo">
-            <p>Mon Amie</p>
+            <h1>Mon Amie</h1>
           </div>
           <div className="menu">
-            <ItemNav
-              link={"#home"}
-              dataUrl={"home"}
-              item={"Inicio"}
-              active="active"
-            />
-            <ItemNav
-              link={"#productos"}
-              dataUrl={"productos"}
-              item={"Productos"}
-            />
-            <ItemNav
-              link={"#Contacto"}
-              dataUrl={"Contacto"}
-              item={"Contacto"}
-            />
+            <Link to="/monamie" data-url="home" className="menu">
+              <span></span>
+              Inicio
+            </Link>
+            <a
+              href="#products"
+              data-url="productos"
+              className="menu"
+              onClick={openMenu}
+            >
+              <span></span>
+              Productos
+            </a>
+            <a href="#contacto" data-url="contacto" className="menu">
+              <span></span>
+              Contacto
+            </a>
             <a
               href="#carrito"
               id="carrito"
@@ -82,6 +93,35 @@ const NavBar = () => {
               <span></span>
               <span></span>
             </button>
+          </div>
+        </div>
+        <div className={`productsMenu ${showMenu}`}>
+          <div className="productsItem">
+            <Link className="allProduct" to="/products" onClick={closeMenu}>
+              <span></span>TODOS LOS PRODUCTOS
+            </Link>
+            <div className="productGender">
+              <div className="gender">
+                <Link to="/products/genero/Mujer" onClick={closeMenu}>
+                  <span></span>Mujer
+                </Link>
+                <div className="genderCategory">
+                  <Link to="/category/Campera" href="#Camperas">
+                    <span></span>Camperas
+                  </Link>
+                </div>
+              </div>
+              <div className="gender">
+                <Link to="/products/genero/Hombre" onClick={closeMenu}>
+                  <span></span>Hombre
+                </Link>
+                <div className="genderCategory">
+                  <Link to="/category/Remera" href="#Remera">
+                    <span></span>Remeras
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </nav>

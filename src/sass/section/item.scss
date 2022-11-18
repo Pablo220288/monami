@@ -26,13 +26,13 @@
       justify-content: space-between;
       align-items: center;
       margin: 10px 0px;
-      .buttom-datails {
+      .button-datails {
         all: unset;
         padding: 3px 10px;
         border-radius: 6px;
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
         cursor: pointer;
-        &:active{
+        &:active {
           transform: scale(0.97);
         }
       }
@@ -65,14 +65,13 @@
     font-size: 1rem;
   }
   .infoText {
-    height: 60px;
     font-size: 0.8rem;
-    overflow-y: scroll;
   }
   .colors_size {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0px 10px;
     .colors {
       //width: 50%;
       display: flex;

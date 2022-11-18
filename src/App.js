@@ -1,20 +1,20 @@
+import BackgroundHome from "./components/BackgroundHome";
+//import ItemDetailContainer from "./components/ItemDetailContainer.js";
+import ItemListContainer from "./components/ItemListContainer";
+import Layout from "./components/Layout";
 import "./sass/styles.scss";
-import NavBar from "./components/NavBar.js";
-//import ItemListContainer from "./components/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer.js";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <NavBar />
-      </header>
-      <main>
-        {/* <ItemListContainer
-          greeting={"Hola Coder..!! Bienvenidos a mi Poryecto React.js"}
-        /> */}
-        <ItemDetailContainer />
-      </main>
+      <Layout>
+        <main>
+          <BackgroundHome />
+          <ItemListContainer
+            greeting={"Hola Coder..!! Bienvenidos a mi Poryecto React.js"}
+          />
+        </main>
+      </Layout>
     </div>
   );
 }

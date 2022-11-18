@@ -10,11 +10,106 @@ html {
   scroll-behavior: smooth;
 }
 
-$colorNav: rgba(0, 0, 0, 0.555);
+$colorNav: rgba(0, 0, 0, 0.377);
 $colorWhite: #ffffff;
 $colorRed: #f8312f;
 $colorBlack: #000000;
 
-.App{
+.App {
   position: relative;
+}
+
+.backgroundHome {
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../assets/backgroundHome.jpg");
+  background-position: 53% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  .slogan {
+    font-size: 3rem;
+    font-family: "Yomogi", cursive;
+    text-transform: uppercase;
+  }
+}
+.backgroundAllProduct {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../../assets/allProducts.jpg");
+  background-position: 40% 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .allProductsSlogan {
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Yomogi", cursive;
+  }
+}
+.backgroundGender {
+  width: 100%;
+  height: 50vh;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  .genderSlogan {
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Yomogi", cursive;
+  }
+}
+.genderTitle {
+  width: 100%;
+  text-align: center;
+  padding: 60px 0px;
+  font-size: 1.5rem;
+  font-family: "Yomogi", cursive;
+}
+.mujer {
+  background-image: url("../../assets/mujer.jpg");
+}
+.hombre {
+  background-image: url("../../assets/hombre.jpg");
+  background-position: 75% 0%;
+}
+
+@media (min-width: 600px) {
+  .backgroundAllProduct {
+    .allProductsSlogan {
+      width: 200px;
+    }
+  }
+  .genderTitle {
+    font-size: 2rem;
+  }
+  .hombre {
+    background-position: 100% 0%;
+  }
+}
+@media (min-width: 800px) {
+  .backgroundAllProduct {
+    .allProductsSlogan {
+      width: 400px;
+    }
+  }
+  .backgroundGender {
+    .genderSlogan {
+      width: 400px;
+    }
+  }
 }

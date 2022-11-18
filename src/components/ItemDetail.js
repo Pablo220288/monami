@@ -1,9 +1,9 @@
+import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CantCart from "./CantCart";
 
 const ItemDetail = ({ item }) => {
-console.log(item)
-
   const [imgMajor, setImgMajor] = useState(1);
 
   const [imgSecundary1, setImgSecundary1] = useState(true);
@@ -13,17 +13,20 @@ console.log(item)
   const [imgSecundary5, setImgSecundary5] = useState(false);
   const [imgSecundary6, setImgSecundary6] = useState(false);
 
+  const navigate = useNavigate();
+
   return (
     <div className="itemDatails">
-      <div className="closeDetails">
-        <ion-icon name="close"></ion-icon>
+      <div
+        className="closeDetails"
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        <ion-icon name="arrow-back-outline"></ion-icon>
       </div>
       <section className="datailsGallery">
-        <img
-          className="imgMajor"
-          alt={item.title}
-          src={item.img[imgMajor]}
-        />
+        <img className="imgMajor" alt={item.title} src={item.img[imgMajor]} />
         <div className="imgSecundarys">
           <div
             className={

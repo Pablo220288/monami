@@ -3,7 +3,6 @@
   left: 0;
   right: 0;
   z-index: 99;
-  background: transparent;
   transition: 0.5s;
   color: $colorBlack;
   .navContainer {
@@ -16,10 +15,9 @@
     .logo {
       display: flex;
       align-items: center;
-      p {
-        font-family: 'Yomogi', cursive;
-        font-weight: 600;
-        font-size: 2rem;
+      h1 {
+        font-family: "Yomogi", cursive;
+        font-size: 1.8rem;
         color: inherit;
       }
     }
@@ -168,6 +166,75 @@
       }
     }
   }
+  .productsMenu {
+    position: fixed;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.372);
+    padding-top: 55px;
+    z-index: -1;
+    transition: 0.8s;
+    .productsItem {
+      width: 90%;
+      margin: auto;
+      height: 100%;
+      border-top: 1px black solid;
+      padding: 20px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 10px;
+      a {
+        text-decoration: none;
+        color: $colorBlack;
+        position: relative;
+        span {
+          position: absolute;
+          background: $colorRed;
+          width: 0;
+          height: 2px;
+          bottom: -3px;
+          left: 0;
+          transition: all 300ms ease-out;
+        }
+        &:hover span {
+          width: 100%;
+        }
+      }
+      .allProduct {
+        font-weight: 600;
+      }
+      .productGender {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .gender {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 5px;
+          margin-left: 15px;
+          .genderCategory {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+  }
+  .showMenuProduct {
+    top: 0px;
+  }
 }
 .nav-mobile {
   opacity: 1;
@@ -212,7 +279,7 @@
       &:hover::before {
         width: 100%;
       }
-      p{
+      p {
         position: relative;
         z-index: 2;
       }
@@ -225,12 +292,12 @@
 
 .nav-scroll {
   background: $colorWhite;
+  color: $colorBlack;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.372);
 }
 /* .nav.nav-scroll .burger .hamburger span{
   background: $colorWhite;
 } */
-
 
 .modal-carrito {
   opacity: 0;
@@ -260,7 +327,7 @@
     transition: var(--transition);
     .modal-title {
       font-size: 2rem;
-      font-family: 'Yomogi', cursive;
+      font-family: "Yomogi", cursive;
       font-weight: 600;
       text-align: center;
       margin-bottom: 15px;

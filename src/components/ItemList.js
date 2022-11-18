@@ -1,10 +1,11 @@
+import React from "react";
 import Item from "./Item";
 
 const ItemList = ({ products }) => {
   return (
     <ul className="cardProduct_conten">
       {products.map((product) => (
-        <Item product={product} />
+        <Item product={product} key={product.id} />
       ))}
     </ul>
   );

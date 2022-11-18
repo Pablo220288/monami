@@ -1,10 +1,10 @@
 import { useState } from "react";
+import PRODUCTOS from "../mocks/products";
 import ItemList from "./ItemList";
 import Loader from "./Loader";
-import PRODUCTOS from "./products";
 
 const ItemListContainer = ({ greeting }) => {
-  const [product, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
   const [hasProduct, setHasProduct] = useState(false);
 
   const listproduct = new Promise((resolve) =>
@@ -20,11 +20,7 @@ const ItemListContainer = ({ greeting }) => {
   return (
     <div className="itemListContainer">
       <div>{greeting}</div>
-      {!hasProduct ? (
-        <Loader/>
-      ) : (
-        <ItemList products={product}/>
-      )}
+      {!hasProduct ? <Loader /> : <ItemList products={products} />}
     </div>
   );
 };
