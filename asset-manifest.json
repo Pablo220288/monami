@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/monamie/static/css/main.5e410983.css",
-    "main.js": "/monamie/static/js/main.adb7e58d.js",
+    "main.css": "/monamie/static/css/main.fb3cc63e.css",
+    "main.js": "/monamie/static/js/main.4d94af6c.js",
     "static/media/mujer.jpg": "/monamie/static/media/mujer.8b23afc7ece45ddb67f0.jpg",
     "static/media/hombre.jpg": "/monamie/static/media/hombre.a49a9169ab842b787f37.jpg",
     "static/media/product_1_2.jpg": "/monamie/static/media/product_1_2.86e0a49dae66497ed778.jpg",
@@ -28,16 +28,22 @@
     "static/media/allProducts.jpg": "/monamie/static/media/allProducts.06eb5e69ff4744020444.jpg",
     "static/media/footer.jpg": "/monamie/static/media/footer.661b569899096d36fbb2.jpg",
     "static/media/product_4_2.jpg": "/monamie/static/media/product_4_2.e4ce9e1b691d517e51f3.jpg",
+    "static/media/product_5_5.jpg": "/monamie/static/media/product_5_5.754e8b74eade71dee277.jpg",
     "static/media/product_4_6.jpg": "/monamie/static/media/product_4_6.726a771dd5b99a3c5169.jpg",
     "static/media/product_4_1.jpg": "/monamie/static/media/product_4_1.e462cc8388807e2f21ae.jpg",
+    "static/media/product_5_4.jpg": "/monamie/static/media/product_5_4.e701646720692ad39199.jpg",
     "static/media/product_2_3.jpg": "/monamie/static/media/product_2_3.55291bc34b374a949698.jpg",
+    "static/media/product_5_2.jpg": "/monamie/static/media/product_5_2.4d213481479cda6df77b.jpg",
     "static/media/product_4_3.jpg": "/monamie/static/media/product_4_3.b74d7661594cbb691659.jpg",
+    "static/media/product_5_3.jpg": "/monamie/static/media/product_5_3.cc848ea338024cb5b428.jpg",
+    "static/media/product_5_6.jpg": "/monamie/static/media/product_5_6.ef40faa81c60b8a5a5ff.jpg",
+    "static/media/product_5_1.jpg": "/monamie/static/media/product_5_1.9e048c97c52cdff86ffb.jpg",
     "index.html": "/monamie/index.html",
-    "main.5e410983.css.map": "/monamie/static/css/main.5e410983.css.map",
-    "main.adb7e58d.js.map": "/monamie/static/js/main.adb7e58d.js.map"
+    "main.fb3cc63e.css.map": "/monamie/static/css/main.fb3cc63e.css.map",
+    "main.4d94af6c.js.map": "/monamie/static/js/main.4d94af6c.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e410983.css",
-    "static/js/main.adb7e58d.js"
+    "static/css/main.fb3cc63e.css",
+    "static/js/main.4d94af6c.js"
   ]
 }
