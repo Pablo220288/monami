@@ -176,8 +176,8 @@ const ItemDetail = ({ item }) => {
             <div className="colors">
               <h2>Color</h2>
               <div className="bottomColors">
-                <button className="color"></button>
-                <button className="color"></button>
+                <button className="color" style={{background: item.color[1], border: `2px solid ${item.color[1]}`}}></button>
+                <button className="color" style={{background: item.color[2], border: `2px solid ${item.color[2]}`}}></button>
               </div>
             </div>
             <div className="sizes">

@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
+import { GiMonclerJacket, GiTShirt } from "react-icons/gi";
 
 const NavBar = () => {
   const [open, setOpen] = useState("");
   const [carrito, setCarrito] = useState("");
   const [scroll, setScroll] = useState(false);
   const [showMenu, setShowMenu] = useState("");
+  const [showMenuMobile, setShowMenuMobile] = useState("");
 
   const openClose = () => {
     open === "is-active" ? setOpen("") : setOpen("is-active");
@@ -30,6 +32,11 @@ const NavBar = () => {
   const closeMenu = () => {
     setShowMenu("");
   };
+  const openMenuMobile = () => {
+    showMenuMobile === "item-mobile-show"
+      ? setShowMenuMobile("")
+      : setShowMenuMobile("item-mobile-show");
+  };
 
   return (
     <div>
@@ -51,11 +58,20 @@ const NavBar = () => {
             >
               <span></span>
               Productos
+              <div
+                className={
+                  showMenu === "showMenuProduct"
+                    ? "icon-menu rotate"
+                    : "icon-menu"
+                }
+              >
+                <ion-icon name="chevron-down-outline"></ion-icon>
+              </div>
             </a>
-            <a href="#contacto" data-url="contacto" className="menu">
+            <Link to="/monamie" data-url="contacto" className="menu">
               <span></span>
               Contacto
-            </a>
+            </Link>
             <a
               href="#carrito"
               id="carrito"
@@ -106,9 +122,20 @@ const NavBar = () => {
                   <span></span>Mujer
                 </Link>
                 <div className="genderCategory">
-                  <Link to="/category/Campera" href="#Camperas">
-                    <span></span>Camperas
-                  </Link>
+                  <div className="categorys">
+                    <GiMonclerJacket />
+                    <Link to="/category/Campera" onClick={closeMenu}>
+                      <span></span>
+                      Camperas
+                    </Link>
+                  </div>
+                  <div className="categorys">
+                    <GiTShirt />
+                    <Link to="/category/Blusa" onClick={closeMenu}>
+                      <span></span>
+                      Blusas
+                    </Link>
+                  </div>
                 </div>
               </div>
               <div className="gender">
@@ -116,9 +143,12 @@ const NavBar = () => {
                   <span></span>Hombre
                 </Link>
                 <div className="genderCategory">
-                  <Link to="/category/Remera" href="#Remera">
-                    <span></span>Remeras
-                  </Link>
+                  <div className="categorys">
+                    <GiTShirt />
+                    <Link to="/category/Remera" onClick={closeMenu}>
+                      <span></span>Remeras
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -130,15 +160,74 @@ const NavBar = () => {
           className={`nav-mobile-container ${open}`}
           id="nav-mobile-container"
         >
-          <a className="nav-mobile-item" href="#home">
+          <Link className="nav-mobile-item" to="/monamie">
             <p>Inicio</p>
-          </a>
-          <a className="nav-mobile-item" href="#productos">
+          </Link>
+          <div className="nav-mobile-item" onClick={openMenuMobile}>
             <p>Productos</p>
-          </a>
-          <a className="nav-mobile-item" href="#contacto">
+            <div
+              className={
+                showMenuMobile === "item-mobile-show" ? "icon rotate" : "icon"
+              }
+            >
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+          </div>
+          <div className={`mobile-item-product ${showMenuMobile}`}>
+            <Link
+              className="mobile-all-item"
+              to="/products"
+              onClick={openClose}
+            >
+              <p>
+                <span></span>Todos los productos
+              </p>
+            </Link>
+            <div className="sub-item">
+              <Link
+                className="sub-item-link"
+                to="/products/genero/Mujer"
+                onClick={openClose}
+              >
+                <p>
+                  <span></span>Mujer
+                </p>
+              </Link>
+              <div className="subsub-item">
+                <Link
+                  className="subsub-item-link"
+                  to="/category/Campera"
+                  onClick={openClose}
+                >
+                  <span></span>
+                  Campera
+                </Link>
+              </div>
+            </div>
+            <div className="sub-item">
+              <Link
+                className="sub-item-link"
+                to="/products/genero/Hombre"
+                onClick={openClose}
+              >
+                <p>
+                  <span></span>Hombre
+                </p>
+              </Link>
+              <div className="subsub-item">
+                <Link
+                  className="subsub-item-link"
+                  to="/category/Remera"
+                  onClick={openClose}
+                >
+                  <span></span>Remera
+                </Link>
+              </div>
+            </div>
+          </div>
+          <Link className="nav-mobile-item" to="/monamie">
             <p>Contacto</p>
-          </a>
+          </Link>
         </div>
       </nav>
       <div className={`modal-carrito ${carrito}`} id="modal-carrito">
