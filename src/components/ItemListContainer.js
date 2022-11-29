@@ -3,6 +3,8 @@ import PRODUCTOS from "../mocks/products";
 import ItemList from "./ItemList";
 import Loader from "./Loader";
 
+
+
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
   const [hasProduct, setHasProduct] = useState(false);
@@ -10,7 +12,7 @@ const ItemListContainer = ({ greeting }) => {
   const listproduct = new Promise((resolve) =>
     setTimeout(() => {
       resolve(PRODUCTOS);
-    }, 3000)
+    }, 3500)
   );
 
   listproduct

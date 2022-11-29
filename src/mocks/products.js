@@ -15,10 +15,11 @@ const PRODUCTOS = [
     description:
       "Tela de sire impermeable, interior de guata forrada con piel sintética y capucha desmontable.",
     price: 24.999,
-    color:{
-      1: '#f00000',
-      2: '#000000'
-    }
+    color: {
+      1: "#f00000",
+      2: "#000000",
+    },
+    stock: 5,
   },
   {
     id: 2,
@@ -36,10 +37,11 @@ const PRODUCTOS = [
     description:
       "Capucha desmontable, manga con terminación en puño, forrada con piel sintetica en su interior, tela de sire impermeable, doble bolsillo y cierre delantero doble función.",
     price: 20.999,
-    color:{
-      1: '#f00000',
-      2: '#000000'
-    }
+    color: {
+      1: "#f00000",
+      2: "#000000",
+    },
+    stock: 4,
   },
   {
     id: 3,
@@ -58,10 +60,11 @@ const PRODUCTOS = [
     description:
       "Manga en terminación recta, doble bolsillo, forrada con corderito por dentro, capucha desmontable.",
     price: 17.999,
-    color:{
-      1: '#50493a',
-      2: '#000000'
-    }
+    color: {
+      1: "#50493a",
+      2: "#000000",
+    },
+    stock: 6,
   },
   {
     id: 4,
@@ -80,10 +83,11 @@ const PRODUCTOS = [
     description:
       "Remera de Jersey manga larga con diseño fantasía de color gris medio melange. De cuello Redondo. De calce Clásico. Confeccionado con algodón 100%, otorgando mayor frescura y comodidad. Marca: Simonacci Polo Life. Ideal para combinar con un look casual.",
     price: 5.999,
-    color:{
-      1: '#95898a',
-      2: '#000000'
-    }
+    color: {
+      1: "#95898a",
+      2: "#000000",
+    },
+    stock: 7,
   },
   {
     id: 5,
@@ -102,10 +106,11 @@ const PRODUCTOS = [
     description:
       "Blusa corta de escote pronunciado, con volados y catera de botones. Está confeccionada en poliester. Tela doble crash. Calce ajustado",
     price: 10.999,
-    color:{
-      1: '#e9ddf5',
-      2: '#f7dcbf'
-    }
+    color: {
+      1: "#e9ddf5",
+      2: "#f7dcbf",
+    },
+    stock: 5,
   },
 ];
 

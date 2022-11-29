@@ -1,0 +1,22 @@
+.baner {
+  width: 400vh;
+  background: $colorBlack;
+  color: $colorWhite;
+  .baner-text {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    animation: scroll 120s linear infinite;
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200vh);
+  }
+}

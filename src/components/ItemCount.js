@@ -1,57 +1,38 @@
-import React from "react";
-import { useState } from "react";
-import Swal from "sweetalert2";
+import React, { useState, useContext } from "react";
+import { CartContext } from "../context/cartContext";
 
-const CantCart = () => {
-  const [cant, setCant] = useState(0);
-  const stockMax = 5;
+const ItemCount = ({ item, count, handleCount, handleAdd, massege }) => {
   const [classClicked, setClassClicked] = useState("");
+  const { addCartItem, isInCartItem } = useContext(CartContext);
 
-  const add = () => {
-    if (cant === stockMax - 1) {
-      setCant(cant + 1);
-    } else if (cant >= stockMax) {
-      Swal.fire("Sin Stock", "Pronto tendremos mas.!", "error");
-    } else {
-      setCant(cant + 1);
-    }
-  };
+  const added = () => {
+    handleAdd();
 
-  const remove = () => {
-    if (cant === stockMax) {
-      setCant(cant - 1);
-    } else if (cant <= 0) {
-      Swal.fire("Carrito Vacio", "Vamos a comprar.?", "warning");
-    } else {
-      setCant(cant - 1);
-    }
+    setClassClicked("clicked");
+    setTimeout(() => {
+      setClassClicked("");
+    }, 3000);
   };
 
   const clicked = () => {
-    if (cant === 0) {
-      Swal.fire(
-        "Nada que agregar.!",
-        "Primero selecciona la Cantidad",
-        "error"
-      );
+    if (isInCartItem(item.id)) {
+      const text = "Producto en el Carrito";
+      massege(text);
     } else {
-      setClassClicked("clicked");
-
-      setTimeout(() => {
-        setClassClicked("");
-      }, 3000);
+      added();
+      addCartItem(item, count);
     }
   };
 
   return (
     <div className="cant-conteiner">
       <div className="cant-selector">
-        <p className="cant-number">{cant}</p>
+        <p className="cant-number">{count}</p>
         <div className="cant-button_contain">
           <button
             className="cant-button"
             onClick={() => {
-              add();
+              handleCount("add");
             }}
           >
             <ion-icon name="caret-up-outline"></ion-icon>
@@ -59,7 +40,7 @@ const CantCart = () => {
           <button
             className="cant-button"
             onClick={() => {
-              remove();
+              handleCount("remove");
             }}
           >
             <ion-icon name="caret-down-outline"></ion-icon>
@@ -81,4 +62,4 @@ const CantCart = () => {
   );
 };
 
-export default CantCart;
+export default ItemCount;

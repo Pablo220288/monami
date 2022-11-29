@@ -4,6 +4,7 @@ import { AllProductView } from "../views/allProduct";
 import { GenderView } from "../views/gender";
 import { CategoryView } from "../views/category";
 import { DetailsView } from "../views/details";
+import { CartView } from "../views/cart";
 
 export const router = createBrowserRouter([
   {
@@ -25,5 +26,9 @@ export const router = createBrowserRouter([
   {
     path: "/product/:product",
     element: <DetailsView />,
+  },
+  {
+    path: "/cart",
+    element: <CartView />,
   },
 ]);

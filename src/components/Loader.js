@@ -1,11 +1,29 @@
 const Loader = () => {
   return (
-    <div className="loader-conatiner" id="loader">
-      <div className="loader-circle-img">
-        <div className="loader-circle-1"></div>
-        <div className="loader-circle-2"></div>
+    <div className="containerLoader">
+      <h2>Loading</h2>
+      <div className="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-      <p className="loader-text">Cargando Productos...</p>
+      <svg >
+        <filter id="gooey">
+          <feGaussianBlur in="SourceGraphic" stdDeviation={10} />
+          <feColorMatrix
+            values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0 0 0 20 -10"
+          />
+        </filter>
+      </svg>
     </div>
   );
 };

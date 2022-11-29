@@ -9,7 +9,7 @@ const ItemDetailContainer = ({ product }) => {
 
   useEffect(() => {
     let details = new Promise((resolve) =>
-      setTimeout(() => resolve(PRODUCTOS[product - 1]), 2000)
+      setTimeout(() => resolve(PRODUCTOS[product - 1]), 3500)
     );
 
     details.then((data) => setItem(data)).then((data) => setHasProduct(!data));

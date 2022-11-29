@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import { GiMonclerJacket, GiTShirt } from "react-icons/gi";
+import { CartPrevius } from "./CartPrevius";
+import { CartContext } from "../context/cartContext";
+import Baner from "./Baner";
 
 const NavBar = () => {
   const [open, setOpen] = useState("");
@@ -37,13 +40,17 @@ const NavBar = () => {
       ? setShowMenuMobile("")
       : setShowMenuMobile("item-mobile-show");
   };
+  const { updateCantCArt, total, clearCartItems } = useContext(CartContext);
 
   return (
     <div>
       <nav className={scroll ? "nav nav-scroll" : "nav"}>
+        <Baner />
         <div className="navContainer">
           <div className="logo">
-            <h1>Mon Amie</h1>
+            <Link className="logo-text" to="/monamie">
+              Mon Amie
+            </Link>
           </div>
           <div className="menu">
             <Link to="/monamie" data-url="home" className="menu">
@@ -81,7 +88,15 @@ const NavBar = () => {
               }}
             >
               <CartWidget className="shop-nav" />
-              <div id="cant-carrito-total" className="cant-carrito-total"></div>
+              <div
+                className={
+                  updateCantCArt()
+                    ? "cant-carrito-total cant-carrito-total-show"
+                    : "cant-carrito-total"
+                }
+              >
+                <p>{updateCantCArt()}</p>
+              </div>
             </a>
           </div>
           <div className="burger">
@@ -94,9 +109,14 @@ const NavBar = () => {
             >
               <CartWidget />
               <div
-                id="cant-carrito-total-xs"
-                className="cant-carrito-total-xs"
-              ></div>
+                className={
+                  updateCantCArt()
+                    ? "cant-carrito-total-xs cant-carrito-total-show"
+                    : "cant-carrito-total-xs"
+                }
+              >
+                <p>{updateCantCArt()}</p>
+              </div>
             </a>
             <button
               className={`hamburger ${open}`}
@@ -203,6 +223,16 @@ const NavBar = () => {
                   Campera
                 </Link>
               </div>
+              <div className="subsub-item">
+                <Link
+                  className="subsub-item-link"
+                  to="/category/Blusa"
+                  onClick={openClose}
+                >
+                  <span></span>
+                  Blusas
+                </Link>
+              </div>
             </div>
             <div className="sub-item">
               <Link
@@ -241,20 +271,27 @@ const NavBar = () => {
               openCarrito();
             }}
           ></ion-icon>
-          <div id="conten-carrito"></div>
+          <div className="conten-carrito">
+            <CartPrevius />
+          </div>
           <div className="total-carrito">
             <p className="total-text">Total Carrito:</p>
-            <p id="total_carrito">$</p>
+            <p id="total_carrito">${total()}</p>
           </div>
           <div className="buttons-carrito">
-            <button className="vaciar" id="vaciar-carrito">
+            <button
+              className="vaciar"
+              onClick={() => {
+                clearCartItems();
+              }}
+            >
               <ion-icon name="close-circle-outline"></ion-icon>
               <p className="button-text">Vaciar</p>
             </button>
-            <button className="comprar" id="comprar">
+            <Link className="comprar" to="/cart">
               <ion-icon name="card-outline"></ion-icon>
               <p className="button-text">Comprar</p>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

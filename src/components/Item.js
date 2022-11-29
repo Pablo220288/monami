@@ -21,7 +21,10 @@ const Item = ({ product }) => {
         </div>
         <div className="productItem">
           <h2 className="title">{product.title}</h2>
-          <p className="category">{product.category}</p>
+          <div className="category-stock">
+            <p className="category">{product.category}</p>
+            <p className="stock"><strong>{`${product.stock}`}</strong> unidades</p>
+          </div>
         </div>
         <div className="productItem">
           <p className="financing">

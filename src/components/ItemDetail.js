@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import CantCart from "./CantCart";
+import { Link, useNavigate } from "react-router-dom";
+import ItemCount from "./ItemCount";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ItemDetail = ({ item }) => {
   const [imgMajor, setImgMajor] = useState(1);
@@ -14,6 +16,37 @@ const ItemDetail = ({ item }) => {
   const [imgSecundary6, setImgSecundary6] = useState(false);
 
   const navigate = useNavigate();
+
+  const [countStock, setcountStock] = useState(item.stock);
+  const [count, setCount] = useState(1);
+  const maxAdd = countStock;
+
+  const massege = (text) => {
+    console.log(text);
+    toast.error(`${text}`, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+  };
+
+  const handleCount = (added) => {
+    if (added === "add") {
+      const text = "Stock Insuficiente";
+      count < maxAdd ? setCount(count + 1) : massege(text);
+    }
+    if (added === "remove" && count > 1) setCount(count - 1);
+  };
+
+  const handleAdd = () => {
+    const text = "Stock Insuficiente";
+    countStock === 0 ? massege(text) : setcountStock(countStock - count);
+  };
 
   return (
     <div className="itemDatails">
@@ -172,12 +205,29 @@ const ItemDetail = ({ item }) => {
           <p className="infoText">{item.description}</p>
         </div>
         <div className="productItem">
+          <p className="infoText">
+            <strong>{countStock}</strong> unidades
+          </p>
+        </div>
+        <div className="productItem">
           <div className="colors_size">
             <div className="colors">
               <h2>Color</h2>
               <div className="bottomColors">
-                <button className="color" style={{background: item.color[1], border: `2px solid ${item.color[1]}`}}></button>
-                <button className="color" style={{background: item.color[2], border: `2px solid ${item.color[2]}`}}></button>
+                <button
+                  className="color"
+                  style={{
+                    background: item.color[1],
+                    border: `2px solid ${item.color[1]}`,
+                  }}
+                ></button>
+                <button
+                  className="color"
+                  style={{
+                    background: item.color[2],
+                    border: `2px solid ${item.color[2]}`,
+                  }}
+                ></button>
               </div>
             </div>
             <div className="sizes">
@@ -193,7 +243,19 @@ const ItemDetail = ({ item }) => {
         </div>
         <div className="productItem">
           <div className="card_price">
-            <CantCart />
+            <div className="buy">
+              <ItemCount
+                item={item}
+                countStock={countStock}
+                count={count}
+                handleCount={handleCount}
+                handleAdd={handleAdd}
+                massege={massege}
+              />
+              <Link to="/cart" className="button-buy">
+                BUY
+              </Link>
+            </div>
             <div className="price-conten">
               <p>$</p>
               <p className="price">{`${item.price}`}</p>
@@ -201,6 +263,7 @@ const ItemDetail = ({ item }) => {
           </div>
         </div>
       </section>
+      <ToastContainer />
     </div>
   );
 };

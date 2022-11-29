@@ -5,6 +5,7 @@
   src: url("../font/TheScientist-L3EyW.ttf") format("truetype");
 }
 @import "./section/general.scss";
+@import "./section/baner.scss";
 @import "./section/nav.scss";
 @import "./section/loader.scss";
 @import "./section/itemListContainer.scss";
@@ -13,4 +14,5 @@
 @import "./section/cantCart.scss";
 @import "./section/itemDetailsContainer.scss";
 @import "./section/itemDetails.scss";
+@import "./section/cart.scss";
 @import "./section/footer.scss";

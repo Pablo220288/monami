@@ -1,5 +1,4 @@
 import BackgroundHome from "./components/BackgroundHome";
-//import ItemDetailContainer from "./components/ItemDetailContainer.js";
 import ItemListContainer from "./components/ItemListContainer";
 import Layout from "./components/Layout";
 import "./sass/styles.scss";
