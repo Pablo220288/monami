@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/monamie/static/css/main.fb3cc63e.css",
-    "main.js": "/monamie/static/js/main.4d94af6c.js",
+    "main.css": "/monamie/static/css/main.6773cbcd.css",
+    "main.js": "/monamie/static/js/main.07b7d2b7.js",
     "static/media/mujer.jpg": "/monamie/static/media/mujer.8b23afc7ece45ddb67f0.jpg",
     "static/media/hombre.jpg": "/monamie/static/media/hombre.a49a9169ab842b787f37.jpg",
     "static/media/product_1_2.jpg": "/monamie/static/media/product_1_2.86e0a49dae66497ed778.jpg",
@@ -39,11 +39,11 @@
     "static/media/product_5_6.jpg": "/monamie/static/media/product_5_6.ef40faa81c60b8a5a5ff.jpg",
     "static/media/product_5_1.jpg": "/monamie/static/media/product_5_1.9e048c97c52cdff86ffb.jpg",
     "index.html": "/monamie/index.html",
-    "main.fb3cc63e.css.map": "/monamie/static/css/main.fb3cc63e.css.map",
-    "main.4d94af6c.js.map": "/monamie/static/js/main.4d94af6c.js.map"
+    "main.6773cbcd.css.map": "/monamie/static/css/main.6773cbcd.css.map",
+    "main.07b7d2b7.js.map": "/monamie/static/js/main.07b7d2b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.fb3cc63e.css",
-    "static/js/main.4d94af6c.js"
+    "static/css/main.6773cbcd.css",
+    "static/js/main.07b7d2b7.js"
   ]
 }
