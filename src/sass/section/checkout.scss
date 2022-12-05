@@ -1,0 +1,100 @@
+.checkout-titles {
+  width: 90%;
+  border-bottom: 2px solid #ececec;
+  margin-bottom: 30px;
+}
+.form-contact-cart {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+  .contact-cart-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .contact-cart-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: 0.3s ease;
+    padding-bottom: 10px;
+    position: relative;
+    .contact-item-text {
+      position: absolute;
+      z-index: -1;
+      top: 0.5rem;
+      left: 0.5rem;
+      transition: 0.2s ease;
+    }
+    .contact-item-text-up {
+      font-size: 0.8rem;
+      top: -1rem;
+      left: 0;
+      transition: 0.2s ease;
+    }
+    .contact-item-input {
+      all: unset;
+      width: 100%;
+      border-bottom: 1px solid #ddd;
+      box-sizing: border-box;
+      padding: 0.5rem;
+    }
+    .conten-select-country {
+      width: 100%;
+      position: relative;
+      &:hover i{
+        margin-top: 3px;
+      }
+      .select-country {
+        appearance: none;
+        display: inline-block;
+        width: 100%;
+        cursor: pointer;
+        padding: 0.5rem;
+        font-size: 1rem;
+        outline: 0;
+        border: 0;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        transition: all 0.25s ease;
+        &::-ms-expand {
+          display: none;
+        }
+      }
+      i{
+        position: absolute;
+        z-index: -1;
+        right: 20px;
+        top: calc(50% - 13px);
+        width: 14px;
+        height: 14px;
+        display: block;
+        border-left:2px solid $colorRed;
+        border-bottom:2px solid $colorRed;
+        transform: rotate(-45deg);
+        transition: all 0.25s ease;
+      }
+    }
+  }
+  .country{
+    padding-bottom: 9px;
+  }
+}
+
+@media (min-width: 500px) {
+  .form-contact-cart {
+    .contact-cart-block {
+      flex-direction: row;
+    }
+  }
+}

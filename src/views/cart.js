@@ -1,12 +1,13 @@
-import React, { useContext } from "react";
 import Cart from "../components/Cart";
 import Layout from "../components/Layout";
+import Pagination from "../components/Pagination";
 
 export const CartView = () => {
   return (
     <Layout>
       <div className="cart">
-        <Cart/>
+        <Pagination/>
+        <Cart />
       </div>
     </Layout>
   );

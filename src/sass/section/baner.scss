@@ -1,13 +1,13 @@
 .baner {
-  width: 400vh;
+  width: 4400px;
   background: $colorBlack;
   color: $colorWhite;
   .baner-text {
     display: flex;
     align-items: center;
-    gap: 100px;
-    animation: scroll 120s linear infinite;
+    animation: scroll 30s linear infinite;
     p {
+      padding: 0px 200px;
       font-size: 0.8rem;
     }
   }
@@ -17,6 +17,6 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-200vh);
+    transform: translateX(-2200px);
   }
 }

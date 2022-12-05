@@ -8,12 +8,12 @@ const Baner = () => {
           LLEGO CYBER MONDAY.. con el código CODERHOUSE obtén un 15% de
           descuento en tus compras
         </p>
-        <p>ENVIO GRATIS a partir de tus compras superiores a $50000</p>
+        <p>ENVIO GRATIS a partir de tus compras superiores a $35000</p>
         <p>
           LLEGO CYBER MONDAY.. con el código CODERHOUSE obtén un 15% de
           descuento en tus compras
         </p>
-        <p>ENVIO GRATIS a partir de tus compras superiores a $50000</p>
+        <p>ENVIO GRATIS a partir de tus compras superiores a $35000</p>
       </div>
     </div>
   );

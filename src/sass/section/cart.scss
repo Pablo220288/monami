@@ -1,10 +1,21 @@
 .cart {
   width: 100%;
-  padding-top: 100px;
+  padding-top: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.cart-empty {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  > p {
+    font-size: 1.2rem;
+  }
 }
 .cart-conten {
   width: 90%;
@@ -14,14 +25,15 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  .cart-conten-product{
+  margin-bottom: 50px;
+  .cart-conten-product {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .cart-conten-total{
+  .cart-conten-total {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -83,7 +95,46 @@
           }
         }
       }
+      .cant-container {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .cant-text {
+          display: none;
+        }
+        .cant-number-button {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          .cant-number {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 5px;
+          }
+          .cant-button_contain {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .cant-button {
+              all: unset;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+              transition: all 0.2s ease;
+              &:hover {
+                border-radius: 6px;
+                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+              }
+            }
+          }
+        }
+      }
       .delete-price {
+        align-self: center;
         width: 100px;
         display: flex;
         justify-content: space-between;
@@ -143,44 +194,96 @@
     .shipping-conten {
       width: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 5px;
+      justify-content: space-between;
+      align-items: flex-end;
       margin-bottom: 10px;
-      .shipping-title {
+      .shipping-select {
         width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 5px;
-      }
-      .freeShipping{
-        margin-left: 20px;
-        font-size: 1rem;
-        font-family: "Yomogi", cursive;
-      }
-      .form-shipping {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         gap: 5px;
-        margin-left: 20px;
-        label {
+        .shipping-title {
+          width: 100%;
           display: flex;
+          justify-content: flex-start;
           align-items: center;
-          gap: 10px;
-          font-size: 0.8rem;
-          color: #838383;
-          transition: 0.3s ease;
-          &:hover{
-            color: $colorBlack;
+          gap: 5px;
+        }
+        .freeShipping {
+          margin-left: 20px;
+          font-size: 1rem;
+          font-family: "Yomogi", cursive;
+        }
+        .shipping-from-price {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          .form-shipping-conten {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            .form-shipping {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: flex-start;
+              gap: 5px;
+              margin-left: 20px;
+              .shipping-inputs {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .input-shipping {
+                  &:hover + label {
+                    color: $colorBlack;
+                  }
+                  &:checked + label {
+                    color: $colorBlack;
+                  }
+                }
+                label {
+                  font-size: 0.8rem;
+                  color: #838383;
+                  transition: 0.3s ease;
+                  &:hover {
+                    color: $colorBlack;
+                  }
+                }
+              }
+              .input-shipping {
+                &:checked ~ .form-shipping label {
+                  color: $colorBlack;
+                }
+              }
+            }
+            p {
+              font-size: 0.7rem;
+            }
+          }
+          .shipping-price {
+            opacity: 0;
+            display: flex;
+            font-weight: bold;
+            gap: 1px;
+            p {
+              &:nth-child(2) {
+                font-size: 0.8rem;
+              }
+            }
+            .price {
+              font-size: 1rem;
+              font-weight: bold;
+            }
+          }
+          .shipping-price-show {
+            opacity: 1;
           }
         }
-      }
-      p{
-        font-size: 0.7rem;
       }
     }
     .coupon-conten {
@@ -239,7 +342,12 @@
           font-weight: bold;
           gap: 1px;
           p {
-            font-size: 0.8rem;
+            &:nth-child(1) {
+              padding-right: 10px;
+            }
+            &:nth-child(2) {
+              font-size: 0.8rem;
+            }
           }
           .price {
             font-size: 1rem;
@@ -279,17 +387,6 @@
       align-items: center;
       justify-content: space-between;
       padding-bottom: 5px;
-      .cart-return {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: $colorBlack;
-        text-decoration: none;
-        transition: 0.4s;
-        &:hover {
-          color: $colorRed;
-        }
-      }
       .total-cart-button {
         all: unset;
         align-self: flex-end;
@@ -311,14 +408,41 @@
   }
 }
 
+.cart-return {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: $colorBlack;
+  text-decoration: none;
+  transition: 0.4s;
+  &:hover {
+    color: $colorRed;
+  }
+}
 
-@media (min-width: 850px){
-  .cart-conten{
+@media (min-width: 550px) {
+  .cart-conten {
+    .cardPrevius {
+      .cardPreviusItems {
+        .cant-container {
+          flex-direction: row;
+          gap: 10px;
+          .cant-text {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .cart-conten {
     flex-direction: row;
     align-items: flex-start;
     gap: 50px;
   }
-  .total-cart{
+  .total-cart {
     border-left: 1.5px solid #ececec;
     padding-left: 20px;
   }

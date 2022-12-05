@@ -3,8 +3,6 @@ import PRODUCTOS from "../mocks/products";
 import ItemList from "./ItemList";
 import Loader from "./Loader";
 
-
-
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
   const [hasProduct, setHasProduct] = useState(false);

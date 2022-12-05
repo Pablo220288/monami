@@ -5,6 +5,7 @@ import { GenderView } from "../views/gender";
 import { CategoryView } from "../views/category";
 import { DetailsView } from "../views/details";
 import { CartView } from "../views/cart";
+import CheckoutView from "../views/checkout";
 
 export const router = createBrowserRouter([
   {
@@ -30,5 +31,9 @@ export const router = createBrowserRouter([
   {
     path: "/cart",
     element: <CartView />,
+  },
+  {
+    path: "/cart/checkout",
+    element: <CheckoutView />,
   },
 ]);
