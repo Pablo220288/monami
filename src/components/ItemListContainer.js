@@ -1,26 +1,22 @@
-import { useState } from "react";
-import PRODUCTOS from "../mocks/products";
+import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import Loader from "./Loader";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
-  const [hasProduct, setHasProduct] = useState(false);
 
-  const listproduct = new Promise((resolve) =>
-    setTimeout(() => {
-      resolve(PRODUCTOS);
-    }, 3500)
-  );
-
-  listproduct
-    .then((data) => setProducts(data))
-    .then((data) => setHasProduct(!data));
+  useEffect(() => {
+    getDocs(collection(getFirestore(), "products"))
+      .then((snapshot) => {
+        const product = snapshot.docs.map((doc) => doc.data());
+        setProducts(product);
+      })
+  }, []);
 
   return (
     <div className="itemListContainer">
       <div>{greeting}</div>
-      {!hasProduct ? <Loader /> : <ItemList products={products} />}
+      {<ItemList products={products} />}
     </div>
   );
 };

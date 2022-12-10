@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Item from "../components/Item";
 import Layout from "../components/Layout";
-import PRODUCTOS from "../mocks/products";
+import { collection, query, getFirestore, where, getDocs } from "firebase/firestore";
 
 export const CategoryView = () => {
   const { category } = useParams();
-  const categoria = PRODUCTOS.filter((product) => product.category === category);
+  const [categoria, setCategoria] = useState([])
+
+  useEffect(() => {
+    getDocs(query(collection(getFirestore(), "products"), where("category", '==', category)))
+      .then((snapshot) => {
+        const products = snapshot.docs.map((doc) => doc.data())
+        setCategoria(products)
+      })
+  }, [category]);
 
   return (
     <Layout>

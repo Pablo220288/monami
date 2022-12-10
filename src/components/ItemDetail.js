@@ -1,12 +1,14 @@
-import React from "react";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ItemCount from "./ItemCount";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { CartContext } from "../context/cartContext";
 
-const ItemDetail = ({ item }) => {
-  const [imgMajor, setImgMajor] = useState(1);
+const ItemDetail = ({ item, imagenes }) => {
+  console.log(imagenes);
+  const { massege } = useContext(CartContext);
+  const [imgMajor, setImgMajor] = useState(imagenes[0]);
 
   const [imgSecundary1, setImgSecundary1] = useState(true);
   const [imgSecundary2, setImgSecundary2] = useState(false);
@@ -20,20 +22,6 @@ const ItemDetail = ({ item }) => {
   const [countStock, setcountStock] = useState(item.stock);
   const [count, setCount] = useState(1);
   const maxAdd = countStock;
-
-  const massege = (text) => {
-    console.log(text);
-    toast.error(`${text}`, {
-      position: "top-center",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "dark",
-    });
-  };
 
   const handleCount = (added) => {
     if (added === "add") {
@@ -59,7 +47,7 @@ const ItemDetail = ({ item }) => {
         <ion-icon name="arrow-back-outline"></ion-icon>
       </div>
       <section className="datailsGallery">
-        <img className="imgMajor" alt={item.title} src={item.img[imgMajor]} />
+        <img className="imgMajor" alt={item.title} src={imgMajor} />
         <div className="imgSecundarys">
           <div
             className={
@@ -71,9 +59,9 @@ const ItemDetail = ({ item }) => {
             <img
               alt={item.title}
               className="imgSecundary"
-              src={item.img[1]}
+              src={imagenes[0]}
               onClick={() => {
-                setImgMajor(1);
+                setImgMajor(imagenes[0]);
                 setImgSecundary1(true);
                 setImgSecundary2(false);
                 setImgSecundary3(false);
@@ -93,9 +81,9 @@ const ItemDetail = ({ item }) => {
             <img
               alt={item.title}
               className="imgSecundary"
-              src={item.img[2]}
+              src={imagenes[1]}
               onClick={() => {
-                setImgMajor(2);
+                setImgMajor(imagenes[1]);
                 setImgSecundary1(false);
                 setImgSecundary2(true);
                 setImgSecundary3(false);
@@ -115,9 +103,9 @@ const ItemDetail = ({ item }) => {
             <img
               alt={item.title}
               className="imgSecundary"
-              src={item.img[3]}
+              src={imagenes[2]}
               onClick={() => {
-                setImgMajor(3);
+                setImgMajor(imagenes[2]);
                 setImgSecundary1(false);
                 setImgSecundary2(false);
                 setImgSecundary3(true);
@@ -137,9 +125,9 @@ const ItemDetail = ({ item }) => {
             <img
               alt={item.title}
               className="imgSecundary"
-              src={item.img[4]}
+              src={imagenes[3]}
               onClick={() => {
-                setImgMajor(4);
+                setImgMajor(imagenes[3]);
                 setImgSecundary1(false);
                 setImgSecundary2(false);
                 setImgSecundary3(false);
@@ -159,9 +147,9 @@ const ItemDetail = ({ item }) => {
             <img
               alt={item.title}
               className="imgSecundary"
-              src={item.img[5]}
+              src={imagenes[4]}
               onClick={() => {
-                setImgMajor(5);
+                setImgMajor(imagenes[4]);
                 setImgSecundary1(false);
                 setImgSecundary2(false);
                 setImgSecundary3(false);
@@ -181,9 +169,9 @@ const ItemDetail = ({ item }) => {
             <img
               alt={item.title}
               className="imgSecundary"
-              src={item.img[6]}
+              src={imagenes[5]}
               onClick={() => {
-                setImgMajor(6);
+                setImgMajor(imagenes[5]);
                 setImgSecundary1(false);
                 setImgSecundary2(false);
                 setImgSecundary3(false);

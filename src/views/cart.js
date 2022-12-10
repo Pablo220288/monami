@@ -6,7 +6,7 @@ export const CartView = () => {
   return (
     <Layout>
       <div className="cart">
-        <Pagination/>
+        <Pagination styles={"paginationCart"}/>
         <Cart />
       </div>
     </Layout>

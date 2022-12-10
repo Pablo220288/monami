@@ -2,14 +2,20 @@ import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { Link } from "react-router-dom";
 
-const Pagination = () => {
+const Pagination = ({ styles }) => {
   return (
-    <div className="pagination-conten">
+    <div className={`pagination-conten ${styles}`}>
       <div className="pagination-item">
         <div className="item-number">
           <p>1</p>
         </div>
-        <p>CARRITO</p>
+        {styles === "paginationCart" ? (
+          <p>CARRITO</p>
+        ) : (
+          <Link to="/cart" className="item-link">
+            CARRITO
+          </Link>
+        )}
       </div>
       <p>
         <IoIosArrowForward />
@@ -18,7 +24,13 @@ const Pagination = () => {
         <div className="item-number">
           <p>2</p>
         </div>
-        <Link to="/cart/checkout" className="item-link">DETALLE DE PAGO</Link>
+        {styles === "paginationCheck" ? (
+          <p>DETALLE DE PAGO</p>
+        ) : (
+          <Link to="/cart/checkout" className="item-link">
+            DETALLE DE PAGO
+          </Link>
+        )}
       </div>
       <p>
         <IoIosArrowForward />
@@ -27,7 +39,13 @@ const Pagination = () => {
         <div className="item-number">
           <p>3</p>
         </div>
-        <p>PEDIDO COMPLETADO</p>
+        {styles === "paginationCart" || styles === "paginationBuy" ? (
+          <p>PEDIDO COMPLETADO</p>
+        ) : (
+          <Link to="/cart/checkout" className="item-link">
+            PEDIDO COMPLETADO
+          </Link>
+        )}
       </div>
     </div>
   );

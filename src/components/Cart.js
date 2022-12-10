@@ -170,7 +170,7 @@ const Cart = () => {
                   <p>Seguir Comprando</p>
                 </Link>
                 <Link to="/cart/checkout" className="total-cart-button">
-                  AVANZAR
+                  Facturación
                 </Link>
               </div>
             </div>

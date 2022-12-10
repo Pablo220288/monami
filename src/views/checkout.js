@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import Pagination from "../components/Pagination";
 
@@ -120,14 +121,14 @@ const CheckoutView = () => {
   const selectState = async (e) => {
     const stateSelected = e.target.value;
     setStateSelected(stateSelected);
-    console.log(stateSelected)
+    console.log(stateSelected);
   };
 
   return (
     <Layout>
       <div className="cart">
-        <Pagination />
-        <>
+        <Pagination styles={"paginationCheck"} />
+        <div className="checkout-container">
           <div className="checkout-titles">
             <h4
               onClick={() => {
@@ -391,7 +392,16 @@ const CheckoutView = () => {
               </div>
             </div>
           </form>
-        </>
+          <div className="cart-buttons">
+            <Link to="/cart" className="total-cart-button">
+              Carrito
+            </Link>
+            <Link to="/cart/checkout" className="total-cart-button">
+              Pago
+            </Link>
+          </div>
+          <div className="checkout-container" />
+        </div>
       </div>
     </Layout>
   );

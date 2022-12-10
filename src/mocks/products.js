@@ -104,7 +104,7 @@ const PRODUCTOS = [
     genero: "Mujer",
     category: "Blusa",
     description:
-      "Blusa corta de escote pronunciado, con volados y catera de botones. Está confeccionada en poliester. Tela doble crash. Calce ajustado",
+      "Blusa corta de escote pronunciado, con volados y catera de botones. Está confeccionada en poliester. Tela doble crash. Calce ajustado.",
     price: 10.999,
     color: {
       1: "#e9ddf5",

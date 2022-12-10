@@ -1,11 +1,20 @@
 import { useParams } from "react-router-dom";
 import Item from "../components/Item";
 import Layout from "../components/Layout";
-import PRODUCTOS from "../mocks/products";
+import { collection, query, getFirestore, where, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
 
 export const GenderView = () => {
   const { genero } = useParams();
-  const genders = PRODUCTOS.filter((product) => product.genero === genero);
+  const [gender, setGender] = useState([])
+
+  useEffect(() => {
+    getDocs(query(collection(getFirestore(), "products"), where("genero", '==', genero)))
+      .then((snapshot) => {
+        const products = snapshot.docs.map((doc) => doc.data())
+        setGender(products)
+      })
+  }, [genero]);
 
   return (
     <Layout>
@@ -26,7 +35,7 @@ export const GenderView = () => {
       </div>
       <h3 className="genderTitle">Vetements</h3>
       <div className="cardProduct_conten genders">
-        {genders.map((produc) => (
+        {gender.map((produc) => (
           <Item product={produc} key={produc.id} />
         ))}
       </div>
