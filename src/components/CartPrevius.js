@@ -4,6 +4,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import visa from "../assets/visa.png";
 
 export const CartPrevius = () => {
+  //Context
   const { cart, removeCartItem } = useContext(CartContext);
 
   return (

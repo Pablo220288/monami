@@ -75,14 +75,15 @@
   &:active {
     transform: scale(0.97);
   }
-  .addToCart, .added{
+  .addToCart,
+  .added {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-weight: bold;
   }
-  .added{
+  .added {
     opacity: 0;
   }
   #iconCart {
@@ -115,46 +116,52 @@
 .cartButton.clicked .added {
   animation: text2 1.5s ease-in-out forwards;
 }
-
+.hide {
+  display: none;
+}
 @keyframes cart {
-  0%{
+  0% {
     left: -25%;
   }
-  40%,60%{
+  40%,
+  60% {
     left: 50%;
   }
-  100%{
+  100% {
     left: 125%;
   }
 }
 
 @keyframes box {
-  0%, 40%{
+  0%,
+  40% {
     top: -30%;
   }
-  60%{
+  60% {
     top: 35%;
     left: 52%;
   }
-  100%{
+  100% {
     top: 35%;
     left: 125%;
   }
 }
 
 @keyframes text1 {
-  0%{
+  0% {
     opacity: 1;
   }
-  20%, 100%{
+  20%,
+  100% {
     opacity: 0;
   }
 }
 @keyframes text2 {
-  0%, 80%{
+  0%,
+  80% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }

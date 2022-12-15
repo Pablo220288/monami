@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+<h1 align="center" font-famili="Yomogi">Mon Amie</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+   <p align="left">
+    <img src="https://img.shields.io/badge/STATUS-Finalizado-green">
+    <img src="https://img.shields.io/badge/React-100%25-blue">
+    <img src="https://img.shields.io/badge/SASS-100%25-pink">
+    <img src="https://img.shields.io/badge/JS-100%25-yellow">
+   </p>
 
-## Available Scripts
+![GitHub Org's stars](https://img.shields.io/github/stars/camilafernanda?style=social)
 
-In the project directory, you can run:
+Hola! 🖐️ Bienvenidos a mi proyecto de REACT.JS.!! 😄
 
-### `npm start`
+## Indice
+1. [Información General](#general-info)
+2. [Funcionalidades](#funcionalidades)
+3. [Tegnologias](#tecnologias)
+4. [Installation](#installation)
+5. [Collaboration](#collaboration)
+6. [FAQs](#faqs)
+***
+#### 📂 Información General
+Mi proyecto consiste en un modelo de e-comerce completamente funcional. Con productos cargados de manera asincrónica desde una base de datos. Podemos visualizar los mismos, interactuar con ellos por medios de filtros y selecciones y examinar sus detalles. Posee una dinámica fácil de entender, pero de gran estética que le permite al usuario navegar por el sitio de manera intuitiva. Al llegar al momento de la compra, los formularios de pago y facturación estan diseñados para guiar al usuario y darle la tranquilidad de estar trabajando en un sitio seguro. La sección de ingreso de datos de pago, cuanta con una animación de la Tarjeta de crédito. El Resumen final le muestra los datos ingresados y oculta los que son privados. Al finalizada la compra se obtiene un código de compra y un registro de la misma en la base de datos.
+***
+#### 🔨 Funcionalidades del proyecto
+<a name="funcionalidades"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `Firebase`: Obtenemos los productos de una Base de Datos.
+- `Filtros`: Podemos filtrar los productos por genero y categoria.
+- `Detalles`: Puedes acceder a una vista detallada de cada producto.
+- `Carrito`: Cuentas con un carrito para agregar productos y editar su cantidad.
+- `Stock`: Tras la compra podras ver actualizado su Stock en la Base de Datos.
+- `Local Storage`: Puedes dejar guardado tus porductos del carrito en si sesion local.
+***
+#### ✔️ Tegnologias utilizadas
+<a name="tecnologias"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![NodeJS](https://miro.medium.com/max/1400/1*jMiDBItXndC7DXxkM8sFIA.png)
 
-### `npm test`
+![SASS + REACT](https://developer.okta.com/assets-jekyll/blog/react-sass/sass-react-fa644d1094e108fd0fa40e95db30309192f80753927e7767d324ccfc58f8351e.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![React Icons](https://camo.githubusercontent.com/4c84010700560f1cc66fab892d54754fe0563379cd0c4c04bb436b0a42d00db6/68747470733a2f2f692e696d6775722e636f6d2f4b4b54306532532e706e67)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+***
+#### 💯 Installation
+Una pequeña introducción sobre la instalación.
+```
+$ git clone https://github.com/Pablo220288/monamie.git
+$ cd C:\Users\Notebook\Desktop\monamie
+$ npm install
+```
+Información adicional: para usar la aplicación en un entorno especial, use ```npm run start``` para comenzar
+***
+#### :books: Acceso al proyecto
+<a name="proyect"></a>
+**Puedes acceder al proyecto en [Git Page](https://pablo220288.github.io/monamie/)**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

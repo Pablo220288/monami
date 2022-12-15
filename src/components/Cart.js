@@ -9,6 +9,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Cart = () => {
+  //Context
   const {
     cart,
     total,
@@ -97,11 +98,7 @@ const Cart = () => {
                     </div>
                     <div className="price-conten">
                       <p>$</p>
-                      <p className="price">{`${(
-                        product.cant *
-                        product.price *
-                        1000
-                      ).toFixed()}`}</p>
+                      <p className="price">{`${total().toFixed()}`}</p>
                     </div>
                   </div>
                 </li>
@@ -160,7 +157,7 @@ const Cart = () => {
                 <div className="total-price">
                   <p>$</p>
                   <p className="price">
-                    {(total() + shippingPrice - desc).toFixed()}
+                    {total().toFixed() - desc + shippingPrice}
                   </p>
                 </div>
               </div>

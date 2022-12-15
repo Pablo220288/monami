@@ -39,13 +39,7 @@ const Pagination = ({ styles }) => {
         <div className="item-number">
           <p>3</p>
         </div>
-        {styles === "paginationCart" || styles === "paginationBuy" ? (
-          <p>PEDIDO COMPLETADO</p>
-        ) : (
-          <Link to="/cart/checkout" className="item-link">
-            PEDIDO COMPLETADO
-          </Link>
-        )}
+        <div className="item-link">FINALIZAR COMPRA</div>
       </div>
     </div>
   );

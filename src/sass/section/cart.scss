@@ -48,119 +48,7 @@
     border-bottom: 2px solid #ececec;
     margin-bottom: 10px;
   }
-  .cardPrevius {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-    .cardPreviusItems {
-      width: 100%;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 5px;
-      .img-info {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 15px;
-        .imgCartPrevius {
-          width: 50px;
-          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
-        }
-        .infoPrevius {
-          justify-self: flex-start;
-          .infoTitle {
-            font-size: 0.9rem;
-            font-weight: bold;
-          }
-          .infoCant {
-            font-size: 0.8rem;
-            color: #6c6c6c;
-          }
-          .infoFin {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            .fin {
-              font-size: 0.8rem;
-            }
-            .visa {
-              width: 30px;
-            }
-          }
-        }
-      }
-      .cant-container {
-        align-self: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .cant-text {
-          display: none;
-        }
-        .cant-number-button {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          .cant-number {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding-right: 5px;
-          }
-          .cant-button_contain {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .cant-button {
-              all: unset;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              cursor: pointer;
-              transition: all 0.2s ease;
-              &:hover {
-                border-radius: 6px;
-                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
-              }
-            }
-          }
-        }
-      }
-      .delete-price {
-        align-self: center;
-        width: 100px;
-        display: flex;
-        justify-content: space-between;
-        .cartDelete {
-          font-size: 1.2rem;
-          cursor: pointer;
-          transition: 0.4s;
-          &:hover {
-            color: $colorRed;
-          }
-        }
-        .price-conten {
-          display: flex;
-          font-weight: bold;
-          gap: 1px;
-          p {
-            font-size: 0.8rem;
-          }
-          .price {
-            font-size: 1rem;
-            font-weight: bold;
-          }
-        }
-      }
-    }
-  }
+
   .total-cart {
     width: 100%;
     display: flex;
@@ -383,7 +271,119 @@
     }
   }
 }
-
+.cardPrevius {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  .cardPreviusItems {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 5px;
+    .img-info {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 15px;
+      .imgCartPrevius {
+        width: 50px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+      }
+      .infoPrevius {
+        justify-self: flex-start;
+        .infoTitle {
+          font-size: 0.9rem;
+          font-weight: bold;
+        }
+        .infoCant {
+          font-size: 0.8rem;
+          color: #6c6c6c;
+        }
+        .infoFin {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          .fin {
+            font-size: 0.8rem;
+          }
+          .visa {
+            width: 30px;
+          }
+        }
+      }
+    }
+    .cant-container {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .cant-text {
+        display: none;
+      }
+      .cant-number-button {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .cant-number {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-right: 5px;
+        }
+        .cant-button_contain {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .cant-button {
+            all: unset;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            &:hover {
+              border-radius: 6px;
+              box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.372);
+            }
+          }
+        }
+      }
+    }
+    .delete-price {
+      align-self: center;
+      width: 100px;
+      display: flex;
+      justify-content: space-between;
+      .cartDelete {
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: 0.4s;
+        &:hover {
+          color: $colorRed;
+        }
+      }
+      .price-conten {
+        display: flex;
+        font-weight: bold;
+        gap: 1px;
+        p {
+          font-size: 0.8rem;
+        }
+        .price {
+          font-size: 1rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
 .cart-buttons {
   width: 100%;
   display: flex;

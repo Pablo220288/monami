@@ -7,26 +7,31 @@ import { CartContext } from "../context/cartContext";
 import Baner from "./Baner";
 
 const NavBar = () => {
+  //Context
+  const { updateCantCArt, total, clearCartItems } = useContext(CartContext);
+
+  //Estados de Interaccion
   const [open, setOpen] = useState("");
   const [carrito, setCarrito] = useState("");
   const [scroll, setScroll] = useState(false);
   const [showMenu, setShowMenu] = useState("");
   const [showMenuMobile, setShowMenuMobile] = useState("");
-
+  //Abrir y Cerrar Menu el version Mobile
   const openClose = () => {
     open === "is-active" ? setOpen("") : setOpen("is-active");
   };
+  //Abrir Carrito
   const openCarrito = () => {
     carrito === "modal_show" ? setCarrito("") : setCarrito("modal_show");
   };
-
+  //Efecto Sroll del Nav
   const navScroll = () => {
     window.scrollY >= 80 ? setScroll(true) : setScroll(false);
   };
   window.addEventListener("scroll", () => {
     navScroll();
   });
-
+  //Menu Productos PC
   const openMenu = () => {
     showMenu === "showMenuProduct"
       ? setShowMenu("")
@@ -35,12 +40,12 @@ const NavBar = () => {
   const closeMenu = () => {
     setShowMenu("");
   };
+  //Menu Productos Mobile
   const openMenuMobile = () => {
     showMenuMobile === "item-mobile-show"
       ? setShowMenuMobile("")
       : setShowMenuMobile("item-mobile-show");
   };
-  const { updateCantCArt, total, clearCartItems } = useContext(CartContext);
 
   return (
     <div>

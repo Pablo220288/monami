@@ -4,9 +4,11 @@ import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import Loader from "./Loader";
 
 const Item = ({ product }) => {
+  //Imagen principal
   const [imgData, setImgData] = useState("");
   const [hasProduct, setHasProduct] = useState(false);
 
+  //Link de Imagen de Storage de Firebase
   useEffect(() => {
     getDownloadURL(ref(getStorage(), `products/${product.img[1]}`))
       .then((data) => setImgData(data))

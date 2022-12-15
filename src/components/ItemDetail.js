@@ -6,23 +6,25 @@ import "react-toastify/dist/ReactToastify.css";
 import { CartContext } from "../context/cartContext";
 
 const ItemDetail = ({ item, imagenes }) => {
-  console.log(imagenes);
+  //Context
   const { massege } = useContext(CartContext);
+  //imagen Principal
   const [imgMajor, setImgMajor] = useState(imagenes[0]);
-
+  //Imagenes secundarias
   const [imgSecundary1, setImgSecundary1] = useState(true);
   const [imgSecundary2, setImgSecundary2] = useState(false);
   const [imgSecundary3, setImgSecundary3] = useState(false);
   const [imgSecundary4, setImgSecundary4] = useState(false);
   const [imgSecundary5, setImgSecundary5] = useState(false);
   const [imgSecundary6, setImgSecundary6] = useState(false);
-
+  //Navegacion
   const navigate = useNavigate();
-
+  //Stock, Cantidad Seleccionada y Cantidad Maxima
   const [countStock, setcountStock] = useState(item.stock);
   const [count, setCount] = useState(1);
   const maxAdd = countStock;
 
+  //Aumentear y Reducir Cantidad
   const handleCount = (added) => {
     if (added === "add") {
       const text = "Stock Insuficiente";
@@ -31,6 +33,7 @@ const ItemDetail = ({ item, imagenes }) => {
     if (added === "remove" && count > 1) setCount(count - 1);
   };
 
+  //Actusalizamos el Stock visible
   const handleAdd = () => {
     const text = "Stock Insuficiente";
     countStock === 0 ? massege(text) : setcountStock(countStock - count);
@@ -231,19 +234,27 @@ const ItemDetail = ({ item, imagenes }) => {
         </div>
         <div className="productItem">
           <div className="card_price">
-            <div className="buy">
-              <ItemCount
-                item={item}
-                countStock={countStock}
-                count={count}
-                handleCount={handleCount}
-                handleAdd={handleAdd}
-                massege={massege}
-              />
-              <Link to="/cart" className="button-buy">
-                BUY
-              </Link>
-            </div>
+            {item.stock === 0 ? (
+              <p>SIN STOCK</p>
+            ) : (
+              <>
+                <div className="buy">
+                  <ItemCount
+                    item={item}
+                    imagenes={imagenes[0]}
+                    countStock={countStock}
+                    count={count}
+                    handleCount={handleCount}
+                    handleAdd={handleAdd}
+                    massege={massege}
+                  />
+                  <Link to="/cart" className="button-buy">
+                    BUY
+                  </Link>
+                </div>
+              </>
+            )}
+
             <div className="price-conten">
               <p>$</p>
               <p className="price">{`${item.price}`}</p>

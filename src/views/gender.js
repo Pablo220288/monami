@@ -1,19 +1,31 @@
 import { useParams } from "react-router-dom";
 import Item from "../components/Item";
 import Layout from "../components/Layout";
-import { collection, query, getFirestore, where, getDocs } from "firebase/firestore";
+import {
+  collection,
+  query,
+  getFirestore,
+  where,
+  getDocs,
+} from "firebase/firestore";
 import { useEffect, useState } from "react";
 
 export const GenderView = () => {
+  //Detectamos en genero seleccionado
   const { genero } = useParams();
-  const [gender, setGender] = useState([])
-
+  //Estado inicial de items fintrados por genero
+  const [gender, setGender] = useState([]);
+  //Obtenemos los items de Firebase filtrados por genero
   useEffect(() => {
-    getDocs(query(collection(getFirestore(), "products"), where("genero", '==', genero)))
-      .then((snapshot) => {
-        const products = snapshot.docs.map((doc) => doc.data())
-        setGender(products)
-      })
+    getDocs(
+      query(
+        collection(getFirestore(), "products"),
+        where("genero", "==", genero)
+      )
+    ).then((snapshot) => {
+      const products = snapshot.docs.map((doc) => doc.data());
+      setGender(products);
+    });
   }, [genero]);
 
   return (
