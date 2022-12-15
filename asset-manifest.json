@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/monamie/static/css/main.56bb2f36.css",
-    "main.js": "/monamie/static/js/main.cbb227be.js",
+    "main.css": "/monamie/static/css/main.73fe5011.css",
+    "main.js": "/monamie/static/js/main.b7058782.js",
     "static/media/mujer.jpg": "/monamie/static/media/mujer.8b23afc7ece45ddb67f0.jpg",
     "static/media/hombre.jpg": "/monamie/static/media/hombre.a49a9169ab842b787f37.jpg",
     "static/media/backgroundHome.jpg": "/monamie/static/media/backgroundHome.e22f7c239cacb4e9727d.jpg",
@@ -9,11 +9,11 @@
     "static/media/allProducts.jpg": "/monamie/static/media/allProducts.06eb5e69ff4744020444.jpg",
     "static/media/footer.jpg": "/monamie/static/media/footer.661b569899096d36fbb2.jpg",
     "index.html": "/monamie/index.html",
-    "main.56bb2f36.css.map": "/monamie/static/css/main.56bb2f36.css.map",
-    "main.cbb227be.js.map": "/monamie/static/js/main.cbb227be.js.map"
+    "main.73fe5011.css.map": "/monamie/static/css/main.73fe5011.css.map",
+    "main.b7058782.js.map": "/monamie/static/js/main.b7058782.js.map"
   },
   "entrypoints": [
-    "static/css/main.56bb2f36.css",
-    "static/js/main.cbb227be.js"
+    "static/css/main.73fe5011.css",
+    "static/js/main.b7058782.js"
   ]
 }
